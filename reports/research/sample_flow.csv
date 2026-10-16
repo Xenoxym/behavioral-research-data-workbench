@@ -1,0 +1,31 @@
+period,period_label,stage,n,excluded_from_previous,note
+I,2015-2016,all_demographic_records,9971,0,Full export; no domain filtering
+I,2015-2016,positive_analysis_weight,9544,427,Blood weight in L; MEC in I/P
+I,2015-2016,age25plus,5053,4491,Primary adult age restriction
+I,2015-2016,noncurrent_cigarette,4091,962,Unknown not treated as noncurrent
+I,2015-2016,no_recent_all_products,3446,645,Explicit five-day nonuse
+I,2015-2016,cotinine_observed,3290,156,No missing assay substitution
+I,2015-2016,cotinine_at_most10,3239,51,Prespecified biomarker cohort cap
+I,2015-2016,income_observed,2909,330,Poverty contrasts available
+I,2015-2016,education_observed,2909,0,Descriptive complete cases
+I,2015-2016,indoor_smoking_observed,2909,0,Full covariate cases
+P,2017-March 2020,all_demographic_records,15560,0,Full export; no domain filtering
+P,2017-March 2020,positive_analysis_weight,14300,1260,Blood weight in L; MEC in I/P
+P,2017-March 2020,age25plus,7912,6388,Primary adult age restriction
+P,2017-March 2020,noncurrent_cigarette,6450,1462,Unknown not treated as noncurrent
+P,2017-March 2020,no_recent_all_products,5584,866,Explicit five-day nonuse
+P,2017-March 2020,cotinine_observed,5262,322,No missing assay substitution
+P,2017-March 2020,cotinine_at_most10,5122,140,Prespecified biomarker cohort cap
+P,2017-March 2020,income_observed,4476,646,Poverty contrasts available
+P,2017-March 2020,education_observed,4473,3,Descriptive complete cases
+P,2017-March 2020,indoor_smoking_observed,4472,1,Full covariate cases
+L,August 2021-August 2023,all_demographic_records,11933,0,Full export; no domain filtering
+L,August 2021-August 2023,positive_analysis_weight,7583,4350,Blood weight in L; MEC in I/P
+L,August 2021-August 2023,age25plus,5518,2065,Primary adult age restriction
+L,August 2021-August 2023,noncurrent_cigarette,4678,840,Unknown not treated as noncurrent
+L,August 2021-August 2023,no_recent_all_products,3711,967,Explicit five-day nonuse
+L,August 2021-August 2023,cotinine_observed,3562,149,No missing assay substitution
+L,August 2021-August 2023,cotinine_at_most10,3489,73,Prespecified biomarker cohort cap
+L,August 2021-August 2023,income_observed,3060,429,Poverty contrasts available
+L,August 2021-August 2023,education_observed,3060,0,Descriptive complete cases
+L,August 2021-August 2023,indoor_smoking_observed,3059,1,Full covariate cases

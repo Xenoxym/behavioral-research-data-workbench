@@ -131,4 +131,9 @@ Continue committing/pushing milestones; never publish raw confidential or creden
 
 ## Deviations
 
-None at freezing. Record later changes here before interpreting their results.
+2026-10-16, before any outcome model fit: clarify that M1 is reported both on all
+income/demographic-complete cases (M1_all) and on the identical household-complete
+sample used for M2 (M1_common). Only M1_common versus M2 is used when discussing
+coefficient changes. This prevents sample-composition changes from being mistaken for
+household-smoking adjustment. This is a methodological clarification, not a change
+chosen after seeing results.

@@ -1,0 +1,22 @@
+{
+  "recorded_at_utc": "2026-10-16T23:33:32.342157+00:00",
+  "status": "passed",
+  "mode": "full validated-cache preparation + R survey inference + report, offline=True",
+  "analytic_input_identical": true,
+  "source_bytes_and_retrieval_times_preserved": true,
+  "scientific_tables_identical": {
+    "estimates.csv": true,
+    "contrasts.csv": true,
+    "models.csv": true,
+    "sensitivities.csv": true,
+    "missingness.csv": true
+  },
+  "scientific_table_sha256": {
+    "estimates.csv": "abd6ceb927d52aac65b319467940e83c00293724aaed068d5ca9a5cc542c3749",
+    "contrasts.csv": "657753f1dfaa7ac8baebf6d2c9455bfc493cc5dd70be33b87b25fa1f2779c721",
+    "models.csv": "6f2bfa434e20e3f2477d93451955a6b7df25196eb1ea489e5c1356f425e5ccbf",
+    "sensitivities.csv": "28b1bfda6c8c73f12f48bd8a64ba8af334117a17e75ff02115068eeb765cba23",
+    "missingness.csv": "645751c915b35f815826940b1ff934bd5af9b4ee947c52380219f58177346483"
+  },
+  "excluded_from_byte_comparison": "Generated timestamps, run metadata and rendered figures; scientific CSVs compared exactly."
+}

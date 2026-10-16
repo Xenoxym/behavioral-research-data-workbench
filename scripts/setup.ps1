@@ -5,6 +5,7 @@ if (-not (Get-Command uv -ErrorAction SilentlyContinue)) {
 }
 uv sync --frozen
 if ($LASTEXITCODE -ne 0) { throw 'Dependency setup failed.' }
-uv run research-workbench demo
-if ($LASTEXITCODE -ne 0) { throw 'Demo initialization failed. Existing data was preserved.' }
+& (Join-Path $PSScriptRoot 'setup_research_r.ps1')
+uv run research-workbench research
+if ($LASTEXITCODE -ne 0) { throw 'Real-data research pipeline failed; inspect the error above.' }
 Write-Output 'Ready. Run start_workbench.cmd to open the local application.'

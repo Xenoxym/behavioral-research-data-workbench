@@ -1,0 +1,23 @@
+{
+  "completed_at_utc": "2026-10-16T23:33:18.856612+00:00",
+  "kind": "real CDC public records; independent secondary analysis",
+  "offline": true,
+  "analytic_sha256": "72ebb1b1c2fcedd292a61ed014974d6f130b03dc61d408850d23077947813ca7",
+  "source_manifest_sha256": "da59baa342cf9f4083eece439d5712675f86286021967e4111a411933d47ab25",
+  "code_sha256": {
+    "research/analysis.R": "521d863d80a27a82d4060f095103272c7ab44ddd97e4eaddea649a25c0f1d50a",
+    "study_workbench/research_data.py": "de1ddf2877845910fd19b69817f744606a5d24e1f50dacc36674e23268eaa7b2",
+    "study_workbench/research_runner.py": "0933e553928578218e8a62b2648fd299b85ed8b54548837620e8ca6267ab06e2",
+    "study_workbench/research_reporting.py": "edcf18f877aa09266a95eae7f1e523f0d21b1989cc4d620a6c6b03badc7a0c47",
+    "docs/RESEARCH_PLAN_V2.md": "db2d4be95ef630a530bf9a0f403e1732396d8dd256d7bb18c0de8038df3c5800"
+  },
+  "output_sha256": {
+    "estimates.csv": "abd6ceb927d52aac65b319467940e83c00293724aaed068d5ca9a5cc542c3749",
+    "contrasts.csv": "657753f1dfaa7ac8baebf6d2c9455bfc493cc5dd70be33b87b25fa1f2779c721",
+    "models.csv": "6f2bfa434e20e3f2477d93451955a6b7df25196eb1ea489e5c1356f425e5ccbf",
+    "sensitivities.csv": "28b1bfda6c8c73f12f48bd8a64ba8af334117a17e75ff02115068eeb765cba23",
+    "missingness.csv": "645751c915b35f815826940b1ff934bd5af9b4ee947c52380219f58177346483",
+    "analysis_metadata.json": "76002a6b5d3d2e5b359b5eeb0932dbb169f263d470a2fc5e59e79fce83d65dac"
+  },
+  "engine_warnings_file": "engine.log"
+}

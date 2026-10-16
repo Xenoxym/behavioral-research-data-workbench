@@ -1,0 +1,189 @@
+{
+  "scope": "source integrity, harmonization and unweighted exclusion accounting only",
+  "generated_at_utc": "2026-10-16T23:33:07+00:00",
+  "source_count": 17,
+  "analytic_rows": 37464,
+  "periods": [
+    {
+      "period": "I",
+      "demographic_rows": 9971,
+      "analytic_export_rows": 9971,
+      "all_demographic_rows_retained": true,
+      "joins": [
+        {
+          "source": "SMQ_I",
+          "source_records": 7001,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "SMQRTU_I",
+          "source_records": 6744,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "SMQFAM_I",
+          "source_records": 9971,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "COT_I",
+          "source_records": 8608,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        }
+      ],
+      "household_count_conflicts": 0,
+      "smoking_skip_conflicts": 0,
+      "recent_detail_conflicts": 0,
+      "household_structural_skips_mapped_to_no": 6930,
+      "age25_unknown_income": 597,
+      "age25_unknown_education": 5,
+      "age25_unknown_indoor_smoking": 182,
+      "age25_unknown_noncurrent": 10,
+      "age25_unknown_recent_nonuse": 700,
+      "age25_smoking_skip_conflicts": 0,
+      "age25_household_count_conflicts": 0,
+      "age25_recent_detail_conflicts": 0,
+      "recent_summary_disagreements": 0,
+      "analysis_weight_missing": 0,
+      "analysis_weight_missing_outside_mec": 0,
+      "analysis_weight_missing_examined_age_under2": 0,
+      "analysis_weight_missing_unexplained": 0,
+      "analysis_weight_zero": 427,
+      "age25_positive_detail_override_broad_no": 0,
+      "weight_linkage": null
+    },
+    {
+      "period": "P",
+      "demographic_rows": 15560,
+      "analytic_export_rows": 15560,
+      "all_demographic_rows_retained": true,
+      "joins": [
+        {
+          "source": "P_SMQ",
+          "source_records": 11137,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "P_SMQRTU",
+          "source_records": 10409,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "P_SMQFAM",
+          "source_records": 15560,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "P_COT",
+          "source_records": 13027,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        }
+      ],
+      "household_count_conflicts": 0,
+      "smoking_skip_conflicts": 0,
+      "recent_detail_conflicts": 0,
+      "household_structural_skips_mapped_to_no": 9897,
+      "age25_unknown_income": 1284,
+      "age25_unknown_education": 15,
+      "age25_unknown_indoor_smoking": 622,
+      "age25_unknown_noncurrent": 5,
+      "age25_unknown_recent_nonuse": 1169,
+      "age25_smoking_skip_conflicts": 0,
+      "age25_household_count_conflicts": 0,
+      "age25_recent_detail_conflicts": 0,
+      "recent_summary_disagreements": 0,
+      "analysis_weight_missing": 0,
+      "analysis_weight_missing_outside_mec": 0,
+      "analysis_weight_missing_examined_age_under2": 0,
+      "analysis_weight_missing_unexplained": 0,
+      "analysis_weight_zero": 1260,
+      "age25_positive_detail_override_broad_no": 0,
+      "weight_linkage": null
+    },
+    {
+      "period": "L",
+      "demographic_rows": 11933,
+      "analytic_export_rows": 11933,
+      "all_demographic_rows_retained": true,
+      "joins": [
+        {
+          "source": "SMQ_L",
+          "source_records": 9015,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "SMQRTU_L",
+          "source_records": 7199,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "SMQFAM_L",
+          "source_records": 11933,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "COT_L",
+          "source_records": 8493,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        },
+        {
+          "source": "HEPA_L",
+          "source_records": 8611,
+          "foreign_keys": 0,
+          "demographic_rows_retained": true
+        }
+      ],
+      "household_count_conflicts": 0,
+      "smoking_skip_conflicts": 0,
+      "recent_detail_conflicts": 0,
+      "household_structural_skips_mapped_to_no": 7998,
+      "age25_unknown_income": 1243,
+      "age25_unknown_education": 25,
+      "age25_unknown_indoor_smoking": 762,
+      "age25_unknown_noncurrent": 28,
+      "age25_unknown_recent_nonuse": 2436,
+      "age25_smoking_skip_conflicts": 0,
+      "age25_household_count_conflicts": 0,
+      "age25_recent_detail_conflicts": 0,
+      "recent_summary_disagreements": 0,
+      "analysis_weight_missing": 3322,
+      "analysis_weight_missing_outside_mec": 3073,
+      "analysis_weight_missing_examined_age_under2": 249,
+      "analysis_weight_missing_unexplained": 0,
+      "analysis_weight_zero": 1028,
+      "age25_positive_detail_override_broad_no": 143,
+      "weight_linkage": {
+        "weight_source": "HEPA_L",
+        "independent_check_source": "HEPB_S_L",
+        "matched_weight_keys": 8611,
+        "all_weights_identical": true,
+        "cotinine_source_keys": 8493,
+        "cotinine_keys_without_weight": 0,
+        "available_cotinine_without_positive_weight": 0,
+        "full_demographic_weight_missing": 3322,
+        "weight_missing_not_mec_examined": 3073,
+        "weight_missing_examined_age_under2": 249,
+        "weight_missing_unexplained": 0,
+        "outside_weight_population_handling": "Retain NA; never replace with MEC weights or zero."
+      }
+    }
+  ],
+  "no_demographic_rows_dropped": true,
+  "outcome_comparisons_run": false,
+  "known_source_discrepancies": [
+    "COT_L documents WTPH2YR but its XPT omits it; linked the common public weight from HEPA_L and checked all keys/values against HEPB_S_L.",
+    "L recent-use interviewing changed to self-administered ACASI; separate SMQ846 is mandatory. No SMQSHS_L is released, so household constructs alone are harmonized."
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "engine": "R survey authoritative design-based inference",
+  "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+  "package_versions": {
+    "survey": "4.5",
+    "jsonlite": "2.0.0"
+  },
+  "generated_at_utc": "2026-10-16T23:33:16Z",
+  "input_md5": "5c5cebe0c1ce9be3dfff2b560e121ebe",
+  "analysis_plan": "docs/RESEARCH_PLAN_V2.md",
+  "prevalence_ci": "survey::svyciprop(method='logit', df=degf(domain_design)); boundary cells have no CI",
+  "variance": "Taylor linearization; full positive-weight design before domains; original PSU/stratum information retained",
+  "contrast_ci": "svyby covariance + svycontrast; t df=degf(low/high domain design)",
+  "crossperiod_ci": "Independent-period variance sum, Satterthwaite df; secondary association comparison",
+  "model_ci": "Design-robust survey::svyglm quasibinomial; t CI and tests with domain design df (PSUs minus strata), not normal or residual-model df",
+  "references": {
+    "poverty": "ge4",
+    "sex": "female",
+    "race_group": "nh_white",
+    "indoor_smoking": "no"
+  },
+  "primary_numerator": "Serum cotinine0.05-10ng/mL",
+  "primary_denominator": "Age25+, noncurrent cigarette responses, no5dayallproducts, observed cotinine<=10; protocol phenotype not clinical truth",
+  "quality_flags": "Diagnostic warnings n<30, design df<8, <5 events/non-events, boundary intervals; NOT a full NCHS presentation-standards certification",
+  "limitations": ["No causal effects, clinical classification, or novelty guarantee", "Missing-category summaries are not imputation or nonresponse correction", "Laboratory missingness extreme scenarios are not MAR estimates or missing-mechanism confidence intervals", "L phlebotomy weights already adjust blood nonresponse; no second IPW adjustment applied", "Survey-mode, sample-design and laboratory changes limit period comparisons", "Model coefficients flagged unstable must not support substantive claims", "M1_all differs in sample; compare only M1_common with M2 for conditional association changes"],
+  "periods": {
+    "I": {
+      "label": "2015-2016",
+      "weight": "WTMEC2YR",
+      "design_records": 9544,
+      "design_df": 15,
+      "primary_n": 3239,
+      "primary_events": 727,
+      "native_lod": 0.015,
+      "cotinine_above10_in_selfreported_cohort": 51,
+      "model_diagnostics": {
+        "M1_all": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group",
+          "n": 2909,
+          "events": 648,
+          "df": 15,
+          "n_lost_from_primary": 330,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        },
+        "M1_common": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group",
+          "n": 2909,
+          "events": 648,
+          "df": 15,
+          "n_lost_from_primary": 330,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        },
+        "M2": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group + indoor_smoking",
+          "n": 2909,
+          "events": 648,
+          "df": 15,
+          "n_lost_from_primary": 330,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        }
+      }
+    },
+    "P": {
+      "label": "2017-March 2020",
+      "weight": "WTMECPRP",
+      "design_records": 14300,
+      "design_df": 25,
+      "primary_n": 5122,
+      "primary_events": 1191,
+      "native_lod": 0.015,
+      "cotinine_above10_in_selfreported_cohort": 140,
+      "model_diagnostics": {
+        "M1_all": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group",
+          "n": 4476,
+          "events": 1040,
+          "df": 25,
+          "n_lost_from_primary": 646,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        },
+        "M1_common": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group",
+          "n": 4475,
+          "events": 1039,
+          "df": 25,
+          "n_lost_from_primary": 647,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        },
+        "M2": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group + indoor_smoking",
+          "n": 4475,
+          "events": 1039,
+          "df": 25,
+          "n_lost_from_primary": 647,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        }
+      }
+    },
+    "L": {
+      "label": "August 2021-August 2023",
+      "weight": "WTPH2YR",
+      "design_records": 7583,
+      "design_df": 15,
+      "primary_n": 3489,
+      "primary_events": 474,
+      "native_lod": 0.01,
+      "cotinine_above10_in_selfreported_cohort": 73,
+      "model_diagnostics": {
+        "M1_all": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group",
+          "n": 3060,
+          "events": 418,
+          "df": 15,
+          "n_lost_from_primary": 429,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        },
+        "M1_common": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group",
+          "n": 3059,
+          "events": 418,
+          "df": 15,
+          "n_lost_from_primary": 430,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        },
+        "M2": {
+          "formula": "exposed ~ poverty_group + age_decade + sex + race_group + indoor_smoking",
+          "n": 3059,
+          "events": 418,
+          "df": 15,
+          "n_lost_from_primary": 430,
+          "converged": true,
+          "quality_flag": "",
+          "warnings": [],
+          "error": null
+        }
+      }
+    }
+  },
+  "output_rows": {
+    "estimates": 42,
+    "contrasts": 6,
+    "models": 93,
+    "sensitivities": 36,
+    "missingness": 24
+  }
+}

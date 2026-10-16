@@ -1,0 +1,55 @@
+period,period_label,target,source_fields,derivation
+I,2015-2016,SEQN,SEQN,Unchanged original public-use key; same-period one-to-one joins
+I,2015-2016,stratum,SDMVSTRA,"Full-design masked variance stratum, not a participant attribute"
+I,2015-2016,psu,SDMVPSU,Masked PSU nested in stratum
+I,2015-2016,age,RIDAGEYR,Screening age; top-coded at 80
+I,2015-2016,sex,RIAGENDR,1 male; 2 female; missing unknown; recorded sex variable
+I,2015-2016,race_group,RIDRETH3,1/2 Hispanic; 3 NH white; 4 NH black; 6 NH Asian; 7 other
+I,2015-2016,income_ratio,INDFMPIR,Observed 0-5 ratio; 5 represents 5+; missing remains blank
+I,2015-2016,poverty_group,INDFMPIR,"<1 lt1; [1,2) 1to2; [2,4) 2to4; >=4 ge4; missing unknown"
+I,2015-2016,education,DMDEDUC2,1/2 lt_hs; 3 hs; 4 some_college; 5 college; 7/9/missing unknown; ages20+
+I,2015-2016,household_smoker,SMD460/SMD470,460=0 no; positive yes; unknown/refused/conflict unknown
+I,2015-2016,indoor_smoking,SMD460/SMD470,470=0 no; positive yes; 460=0 and structurally skipped470 no; conflicts unknown
+I,2015-2016,noncurrent,SMQ020/SMQ040,020=2 with skipped040 or 020=1 &040=3 ->1; 020=1 &040=1/2 ->0; others unknown
+I,2015-2016,cotinine,LBXCOT,Original serum ng/mL including CDC below-LOD fill; missing remains blank
+I,2015-2016,below_lod,LBDCOTLC,1 below; 0 above; I code2 above calibrated range maps0 with raw flag preserved
+I,2015-2016,weight,WTMEC2YR,Nonnegative original survey weight; L linked1:1 and independently verified; no substitution
+I,2015-2016,mec_weight,WTMEC2YR,Retained for laboratory-availability denominator
+I,2015-2016,no_recent_all,SMQ681/SMQ851/SMQ863/SMQ690H,All broad screens explicitly2; L846 explicitly2; I/P H8 overrides broad no; positive detail evidence excludes; unknown preserved
+I,2015-2016,lod,CDC laboratory codebook,0.015 ng/mL
+P,2017-March 2020,SEQN,SEQN,Unchanged original public-use key; same-period one-to-one joins
+P,2017-March 2020,stratum,SDMVSTRA,"Full-design masked variance stratum, not a participant attribute"
+P,2017-March 2020,psu,SDMVPSU,Masked PSU nested in stratum
+P,2017-March 2020,age,RIDAGEYR,Screening age; top-coded at 80
+P,2017-March 2020,sex,RIAGENDR,1 male; 2 female; missing unknown; recorded sex variable
+P,2017-March 2020,race_group,RIDRETH3,1/2 Hispanic; 3 NH white; 4 NH black; 6 NH Asian; 7 other
+P,2017-March 2020,income_ratio,INDFMPIR,Observed 0-5 ratio; 5 represents 5+; missing remains blank
+P,2017-March 2020,poverty_group,INDFMPIR,"<1 lt1; [1,2) 1to2; [2,4) 2to4; >=4 ge4; missing unknown"
+P,2017-March 2020,education,DMDEDUC2,1/2 lt_hs; 3 hs; 4 some_college; 5 college; 7/9/missing unknown; ages20+
+P,2017-March 2020,household_smoker,SMD460/SMD470,460=0 no; positive yes; unknown/refused/conflict unknown
+P,2017-March 2020,indoor_smoking,SMD460/SMD470,470=0 no; positive yes; 460=0 and structurally skipped470 no; conflicts unknown
+P,2017-March 2020,noncurrent,SMQ020/SMQ040,020=2 with skipped040 or 020=1 &040=3 ->1; 020=1 &040=1/2 ->0; others unknown
+P,2017-March 2020,cotinine,LBXCOT,Original serum ng/mL including CDC below-LOD fill; missing remains blank
+P,2017-March 2020,below_lod,LBDCOTLC,1 below; 0 above; I code2 above calibrated range maps0 with raw flag preserved
+P,2017-March 2020,weight,WTMECPRP,Nonnegative original survey weight; L linked1:1 and independently verified; no substitution
+P,2017-March 2020,mec_weight,WTMECPRP,Retained for laboratory-availability denominator
+P,2017-March 2020,no_recent_all,SMQ681/SMQ851/SMQ863/SMQ690H,All broad screens explicitly2; L846 explicitly2; I/P H8 overrides broad no; positive detail evidence excludes; unknown preserved
+P,2017-March 2020,lod,CDC laboratory codebook,0.015 ng/mL
+L,August 2021-August 2023,SEQN,SEQN,Unchanged original public-use key; same-period one-to-one joins
+L,August 2021-August 2023,stratum,SDMVSTRA,"Full-design masked variance stratum, not a participant attribute"
+L,August 2021-August 2023,psu,SDMVPSU,Masked PSU nested in stratum
+L,August 2021-August 2023,age,RIDAGEYR,Screening age; top-coded at 80
+L,August 2021-August 2023,sex,RIAGENDR,1 male; 2 female; missing unknown; recorded sex variable
+L,August 2021-August 2023,race_group,RIDRETH3,1/2 Hispanic; 3 NH white; 4 NH black; 6 NH Asian; 7 other
+L,August 2021-August 2023,income_ratio,INDFMPIR,Observed 0-5 ratio; 5 represents 5+; missing remains blank
+L,August 2021-August 2023,poverty_group,INDFMPIR,"<1 lt1; [1,2) 1to2; [2,4) 2to4; >=4 ge4; missing unknown"
+L,August 2021-August 2023,education,DMDEDUC2,1/2 lt_hs; 3 hs; 4 some_college; 5 college; 7/9/missing unknown; ages20+
+L,August 2021-August 2023,household_smoker,SMD460/SMD470,460=0 no; positive yes; unknown/refused/conflict unknown
+L,August 2021-August 2023,indoor_smoking,SMD460/SMD470,470=0 no; positive yes; 460=0 and structurally skipped470 no; conflicts unknown
+L,August 2021-August 2023,noncurrent,SMQ020/SMQ040,020=2 with skipped040 or 020=1 &040=3 ->1; 020=1 &040=1/2 ->0; others unknown
+L,August 2021-August 2023,cotinine,LBXCOT,Original serum ng/mL including CDC below-LOD fill; missing remains blank
+L,August 2021-August 2023,below_lod,LBDCOTLC,1 below; 0 above; I code2 above calibrated range maps0 with raw flag preserved
+L,August 2021-August 2023,weight,HEPA_L.WTPH2YR + HEPB_S_L validation,Nonnegative original survey weight; L linked1:1 and independently verified; no substitution
+L,August 2021-August 2023,mec_weight,WTMEC2YR,Retained for laboratory-availability denominator
+L,August 2021-August 2023,no_recent_all,SMQ681/SMQ851/SMQ863/SMQ846,All broad screens explicitly2; L846 explicitly2; I/P H8 overrides broad no; positive detail evidence excludes; unknown preserved
+L,August 2021-August 2023,lod,CDC laboratory codebook,0.01 ng/mL

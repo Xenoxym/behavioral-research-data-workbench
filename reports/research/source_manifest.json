@@ -1,0 +1,513 @@
+{
+  "study": "Tobacco Exposure Equity Study",
+  "data_kind": "real_public_secondary_analysis",
+  "generated_at_utc": "2026-10-16T23:33:07+00:00",
+  "checksum_algorithm": "SHA-256",
+  "frozen_plan_commit": "4ceb883",
+  "frozen_plan_sha256": "db2d4be95ef630a530bf9a0f403e1732396d8dd256d7bb18c0de8038df3c5800",
+  "analytic_csv_sha256": "72ebb1b1c2fcedd292a61ed014974d6f130b03dc61d408850d23077947813ca7",
+  "analytic_rows": 37464,
+  "analytic_columns": [
+    "period",
+    "period_label",
+    "SEQN",
+    "stratum",
+    "psu",
+    "weight",
+    "mec_weight",
+    "age",
+    "sex",
+    "race_group",
+    "income_ratio",
+    "poverty_group",
+    "education",
+    "indoor_smoking",
+    "household_smoker",
+    "noncurrent",
+    "no_recent_all",
+    "cotinine",
+    "below_lod",
+    "lod",
+    "RIDSTATR",
+    "RIAGENDR",
+    "RIDRETH3",
+    "DMDEDUC2",
+    "SMQ020",
+    "SMQ040",
+    "SMD641",
+    "SMQ681",
+    "SMQ851",
+    "SMQ863",
+    "SMDANY",
+    "SMQ690A",
+    "SMQ690F",
+    "SMQ690H",
+    "SMQ846",
+    "SMD460",
+    "SMD470",
+    "LBDCOTLC",
+    "has_smq_row",
+    "has_smqrtu_row",
+    "has_smqfam_row",
+    "has_cot_row",
+    "household_conflict",
+    "smoking_skip_conflict",
+    "recent_detail_conflict",
+    "household_indoor_structural_skip"
+  ],
+  "sources": [
+    {
+      "name": "DEMO_I",
+      "period": "I",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm",
+      "sha256": "c9297c6c37ae8f78f29be9568fa2a03cf3b112616a39afee04030fc775a66a0d",
+      "bytes": 3756480,
+      "retrieved_at_utc": "2026-10-16T23:22:49+00:00",
+      "period_label": "2015-2016",
+      "component": "DEMO",
+      "records": 9971,
+      "documented_records": 9971,
+      "selected_columns": [
+        "SEQN",
+        "SDDSRVYR",
+        "RIDSTATR",
+        "RIDAGEYR",
+        "RIAGENDR",
+        "RIDRETH3",
+        "INDFMPIR",
+        "DMDEDUC2",
+        "SDMVSTRA",
+        "SDMVPSU",
+        "WTMEC2YR"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "RIDAGEYR": 396,
+        "WTMEC2YR": 427,
+        "INDFMPIR": 92
+      }
+    },
+    {
+      "name": "SMQ_I",
+      "period": "I",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQ_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQ_I.htm",
+      "sha256": "529ce1c407e99dce937ca75d14c8c630e0c9c30a4a9a851760cd2884bbb28fe0",
+      "bytes": 2681040,
+      "retrieved_at_utc": "2026-10-16T23:22:49+00:00",
+      "period_label": "2015-2016",
+      "component": "SMQ",
+      "records": 7001,
+      "documented_records": 7001,
+      "selected_columns": [
+        "SEQN",
+        "SMQ020",
+        "SMQ040",
+        "SMD641"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "SMD641": 51
+      }
+    },
+    {
+      "name": "SMQRTU_I",
+      "period": "I",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQRTU_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQRTU_I.htm",
+      "sha256": "b156a290cbeaff07aaf047d064f3c85e9786fe79824588f58508f452130920e5",
+      "bytes": 1569440,
+      "retrieved_at_utc": "2026-10-16T23:22:49+00:00",
+      "period_label": "2015-2016",
+      "component": "SMQRTU",
+      "records": 6744,
+      "documented_records": 6744,
+      "selected_columns": [
+        "SEQN",
+        "SMQ681",
+        "SMQ851",
+        "SMQ863",
+        "SMDANY",
+        "SMQ690A",
+        "SMQ690F",
+        "SMQ690H"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {}
+    },
+    {
+      "name": "SMQFAM_I",
+      "period": "I",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQFAM_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQFAM_I.htm",
+      "sha256": "41cc8d1ab2a53af1ee7e7f515e2a010523ca58c3d256c201eec9b59044896461",
+      "bytes": 320400,
+      "retrieved_at_utc": "2026-10-16T23:22:48+00:00",
+      "period_label": "2015-2016",
+      "component": "SMQFAM",
+      "records": 9971,
+      "documented_records": 9971,
+      "selected_columns": [
+        "SEQN",
+        "SMD460",
+        "SMD470"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "SMD460": 6930,
+        "SMD470": 1769
+      }
+    },
+    {
+      "name": "COT_I",
+      "period": "I",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/COT_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/COT_I.htm",
+      "sha256": "272e52c1f3e9ec23d515facce375a62719a6f17f5ce46122f9c54e39a582b665",
+      "bytes": 345760,
+      "retrieved_at_utc": "2026-10-16T23:22:49+00:00",
+      "period_label": "2015-2016",
+      "component": "COT",
+      "records": 8608,
+      "documented_records": 8608,
+      "selected_columns": [
+        "SEQN",
+        "LBXCOT",
+        "LBDCOTLC"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "LBDCOTLC": 5115
+      }
+    },
+    {
+      "name": "P_DEMO",
+      "period": "P",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_DEMO.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_DEMO.htm",
+      "sha256": "2e46c6c26bf77cd8989f64011ace12cbf42c0f3e03414eb59acc5328c8f87913",
+      "bytes": 3614720,
+      "retrieved_at_utc": "2026-10-16T23:23:30+00:00",
+      "period_label": "2017-March 2020",
+      "component": "DEMO",
+      "records": 15560,
+      "documented_records": 15560,
+      "selected_columns": [
+        "SEQN",
+        "SDDSRVYR",
+        "RIDSTATR",
+        "RIDAGEYR",
+        "RIAGENDR",
+        "RIDRETH3",
+        "INDFMPIR",
+        "DMDEDUC2",
+        "SDMVSTRA",
+        "SDMVPSU",
+        "WTMECPRP"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "RIDAGEYR": 574,
+        "WTMECPRP": 1260,
+        "INDFMPIR": 142
+      }
+    },
+    {
+      "name": "P_SMQ",
+      "period": "P",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_SMQ.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_SMQ.htm",
+      "sha256": "29b7f6c59ab570c042c866312f0eb4329009e85fadbda6f9427a8bf31ecb3a3f",
+      "bytes": 1428560,
+      "retrieved_at_utc": "2026-10-16T23:22:49+00:00",
+      "period_label": "2017-March 2020",
+      "component": "SMQ",
+      "records": 11137,
+      "documented_records": 11137,
+      "selected_columns": [
+        "SEQN",
+        "SMQ020",
+        "SMQ040",
+        "SMD641"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "SMD641": 51
+      }
+    },
+    {
+      "name": "P_SMQRTU",
+      "period": "P",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_SMQRTU.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_SMQRTU.htm",
+      "sha256": "142c4c7587fdefab420707cca4c412bf0cb3536d0daf1282f56cb4a4bf100c4d",
+      "bytes": 2086080,
+      "retrieved_at_utc": "2026-10-16T23:22:49+00:00",
+      "period_label": "2017-March 2020",
+      "component": "SMQRTU",
+      "records": 10409,
+      "documented_records": 10409,
+      "selected_columns": [
+        "SEQN",
+        "SMQ681",
+        "SMQ851",
+        "SMQ863",
+        "SMDANY",
+        "SMQ690A",
+        "SMQ690F",
+        "SMQ690H"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {}
+    },
+    {
+      "name": "P_SMQFAM",
+      "period": "P",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_SMQFAM.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_SMQFAM.htm",
+      "sha256": "f305ba974aac5df79eb9bea139161ac45f338db2b5af5f5f79b400446088b0c7",
+      "bytes": 374640,
+      "retrieved_at_utc": "2026-10-16T23:22:49+00:00",
+      "period_label": "2017-March 2020",
+      "component": "SMQFAM",
+      "records": 15560,
+      "documented_records": 15560,
+      "selected_columns": [
+        "SEQN",
+        "SMD460",
+        "SMD470"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "SMD460": 9897,
+        "SMD470": 2922
+      }
+    },
+    {
+      "name": "P_COT",
+      "period": "P",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_COT.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_COT.htm",
+      "sha256": "2c98920928af839775220dc9eefb553a4d01309a54addd3992a9875313e2961f",
+      "bytes": 522560,
+      "retrieved_at_utc": "2026-10-16T23:22:50+00:00",
+      "period_label": "2017-March 2020",
+      "component": "COT",
+      "records": 13027,
+      "documented_records": 13027,
+      "selected_columns": [
+        "SEQN",
+        "LBXCOT",
+        "LBDCOTLC"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "LBDCOTLC": 7651
+      }
+    },
+    {
+      "name": "DEMO_L",
+      "period": "L",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm",
+      "sha256": "ca4374a158b493b8b0163e1388da21d57a18d1b9cecff2aa4e2fa2bec494fe23",
+      "bytes": 2582160,
+      "retrieved_at_utc": "2026-10-16T23:22:50+00:00",
+      "period_label": "August 2021-August 2023",
+      "component": "DEMO",
+      "records": 11933,
+      "documented_records": 11933,
+      "selected_columns": [
+        "SEQN",
+        "SDDSRVYR",
+        "RIDSTATR",
+        "RIDAGEYR",
+        "RIAGENDR",
+        "RIDRETH3",
+        "INDFMPIR",
+        "DMDEDUC2",
+        "SDMVSTRA",
+        "SDMVPSU",
+        "WTMEC2YR"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "RIDAGEYR": 189,
+        "WTMEC2YR": 3073,
+        "INDFMPIR": 100
+      }
+    },
+    {
+      "name": "SMQ_L",
+      "period": "L",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SMQ_L.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SMQ_L.htm",
+      "sha256": "abbefebfa5585b1e19c079fa14be20c113a4649318070197214b258d05b93c50",
+      "bytes": 651120,
+      "retrieved_at_utc": "2026-10-16T23:23:30+00:00",
+      "period_label": "August 2021-August 2023",
+      "component": "SMQ",
+      "records": 9015,
+      "documented_records": 9015,
+      "selected_columns": [
+        "SEQN",
+        "SMQ020",
+        "SMQ040",
+        "SMD641"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "SMD641": 23
+      }
+    },
+    {
+      "name": "SMQRTU_L",
+      "period": "L",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SMQRTU_L.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SMQRTU_L.htm",
+      "sha256": "9788fb55f27a565d3852b0835395c724b07731ebaea11e1284145ddc8690bcec",
+      "bytes": 1213120,
+      "retrieved_at_utc": "2026-10-16T23:23:30+00:00",
+      "period_label": "August 2021-August 2023",
+      "component": "SMQRTU",
+      "records": 7199,
+      "documented_records": 7199,
+      "selected_columns": [
+        "SEQN",
+        "SMQ681",
+        "SMQ851",
+        "SMQ863",
+        "SMDANY",
+        "SMQ690A",
+        "SMQ690F",
+        "SMQ846"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {}
+    },
+    {
+      "name": "SMQFAM_L",
+      "period": "L",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SMQFAM_L.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SMQFAM_L.htm",
+      "sha256": "1f5c0c3c3fe674ec8ffb809131b970db4f3194f8975d16aca466e59f42216d9c",
+      "bytes": 287600,
+      "retrieved_at_utc": "2026-10-16T23:23:30+00:00",
+      "period_label": "August 2021-August 2023",
+      "component": "SMQFAM",
+      "records": 11933,
+      "documented_records": 11933,
+      "selected_columns": [
+        "SEQN",
+        "SMD460",
+        "SMD470"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "SMD460": 7998,
+        "SMD470": 1663
+      }
+    },
+    {
+      "name": "COT_L",
+      "period": "L",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/COT_L.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/COT_L.htm",
+      "sha256": "79a68f2eb693382e51fc3e95fac4a51b399ce3f589aa7fd14f8df91729be6d38",
+      "bytes": 341200,
+      "retrieved_at_utc": "2026-10-16T23:23:30+00:00",
+      "period_label": "August 2021-August 2023",
+      "component": "COT",
+      "records": 8493,
+      "documented_records": 8493,
+      "selected_columns": [
+        "SEQN",
+        "LBXCOT",
+        "LBDCOTLC"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "LBDCOTLC": 4367
+      }
+    },
+    {
+      "name": "HEPA_L",
+      "period": "L",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/HEPA_L.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/HEPA_L.htm",
+      "sha256": "0eacb9b1b0bce97ac85aa5df1f95f78aca36bff72c9f07ba70a9d381579b5517",
+      "bytes": 207920,
+      "retrieved_at_utc": "2026-10-16T23:23:30+00:00",
+      "period_label": "August 2021-August 2023",
+      "component": "WEIGHT",
+      "records": 8611,
+      "documented_records": 8611,
+      "selected_columns": [
+        "SEQN",
+        "WTPH2YR"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "WTPH2YR": 1028
+      }
+    },
+    {
+      "name": "HEPB_S_L",
+      "period": "L",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/HEPB_S_L.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/HEPB_S_L.htm",
+      "sha256": "1b55c7cb6f0c9ce5991cade1c79271b36982075a74c15721c3eacf494747d7d7",
+      "bytes": 207920,
+      "retrieved_at_utc": "2026-10-16T23:23:30+00:00",
+      "period_label": "August 2021-August 2023",
+      "component": "WEIGHT_CHECK",
+      "records": 8611,
+      "documented_records": 8611,
+      "selected_columns": [
+        "SEQN",
+        "WTPH2YR"
+      ],
+      "verified_at_utc": "2026-10-16T23:33:06+00:00",
+      "cached": true,
+      "zero_artifacts_normalized": {
+        "WTPH2YR": 1028
+      }
+    }
+  ],
+  "weight_linkage": {
+    "weight_source": "HEPA_L",
+    "independent_check_source": "HEPB_S_L",
+    "matched_weight_keys": 8611,
+    "all_weights_identical": true,
+    "cotinine_source_keys": 8493,
+    "cotinine_keys_without_weight": 0,
+    "available_cotinine_without_positive_weight": 0,
+    "full_demographic_weight_missing": 3322,
+    "weight_missing_not_mec_examined": 3073,
+    "weight_missing_examined_age_under2": 249,
+    "weight_missing_unexplained": 0,
+    "outside_weight_population_handling": "Retain NA; never replace with MEC weights or zero."
+  },
+  "software": {
+    "pandas": "2.3.3",
+    "numpy": "2.5.4"
+  },
+  "original_measurements": "CDC/NHANES; collected independently here as public source files, not participant recruitment or new physical measurements"
+}

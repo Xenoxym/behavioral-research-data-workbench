@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "engine": "Streamlit AppTest against actual saved public research artifacts",
+  "pages": [
+    "Study overview",
+    "Questions & methods",
+    "Weighted results",
+    "Sensitivity & selection",
+    "Sources & provenance",
+    "Research report"
+  ],
+  "exceptions": [],
+  "synthetic_test_fixtures_used": false
+}

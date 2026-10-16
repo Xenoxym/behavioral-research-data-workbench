@@ -1,5 +1,5 @@
-"""Streamlit entry point: python -m streamlit run app.py."""
+"""Real-data research entry point: python -m streamlit run app.py."""
 
-from study_workbench.ui import main
+from study_workbench.research_ui import main
 
 main()

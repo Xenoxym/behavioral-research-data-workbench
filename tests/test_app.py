@@ -23,7 +23,7 @@ def app(monkeypatch, tmp_path):
     monkeypatch.setenv("WORKBENCH_DATA_DIR", str(tmp_path / "data"))
     monkeypatch.setenv("WORKBENCH_DB_PATH", str(tmp_path / "workbench.sqlite"))
     monkeypatch.setenv("WORKBENCH_REPORTS_DIR", str(tmp_path / "reports"))
-    return AppTest.from_file(str(ROOT / "app.py"), default_timeout=45).run()
+    return AppTest.from_file(str(ROOT / "legacy_app.py"), default_timeout=45).run()
 
 
 def _button(app, label):
@@ -105,7 +105,7 @@ def test_reasoned_correction_requires_actor_reason_and_persists_restart(app, tmp
     working = restarted.load_bundle()["baseline"]
     assert raw.loc[raw["row_id"].eq(row_id), "readiness"].iloc[0] == current
     assert working.loc[working["row_id"].eq(row_id), "readiness"].iloc[0] == int(replacement)
-    fresh_app = AppTest.from_file(str(ROOT / "app.py"), default_timeout=45).run()
+    fresh_app = AppTest.from_file(str(ROOT / "legacy_app.py"), default_timeout=45).run()
     _navigate(fresh_app, "Corrections & audit")
     assert len(fresh_app.dataframe[-1].value) == 1
 

@@ -38,7 +38,21 @@ def main():
     public = commands.add_parser("nhanes", help="Analyze independent public CDC data")
     public.add_argument("--output", default="reports/nhanes")
     public.add_argument("--cache", default="data/nhanes")
+    research = commands.add_parser("research", help="Reproduce the real-data tobacco exposure equity study")
+    research.add_argument("--cache", default="data/research/raw")
+    research.add_argument("--work", default="data/research")
+    research.add_argument("--output", default="reports/research")
+    research.add_argument("--offline", action="store_true", help="Require validated cached CDC sources")
+    research.add_argument("--prepare-only", action="store_true", help="Collect and audit data without inference")
+    research.add_argument("--rscript", help="Explicit Rscript executable; otherwise project-local or PATH")
     args = parser.parse_args()
+    if args.command == "research":
+        from .research_runner import run_research
+        print(json.dumps(run_research(cache_dir=args.cache, work_dir=args.work,
+                                     output_dir=args.output, offline=args.offline,
+                                     prepare_only=args.prepare_only, rscript=args.rscript),
+                         indent=2, default=str))
+        return
     if args.command == "nhanes":
         from .nhanes import run_analysis
         print(json.dumps(run_analysis(args.output, args.cache), indent=2, default=str))

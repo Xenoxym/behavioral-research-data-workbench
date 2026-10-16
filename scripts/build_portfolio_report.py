@@ -1,4 +1,4 @@
-"""Build a bilingual job-application report from saved measured evidence."""
+"""Build the historical V1 report; current research uses build_research_portfolio.py."""
 from html import escape
 import json
 from pathlib import Path
@@ -83,7 +83,9 @@ def main():
     md += "\n\n## 五分钟演示路线\n\n" + "\n".join(f"{i}. {item}" for i, item in enumerate(demo, 1))
     md += "\n\n## 表述边界与下一步\n\n" + "\n".join("- " + item for item in limitations)
     md += "\n\n## 可核查证据\n\n- [Quality metrics](quality/evaluation.json)\n- [Study report](study_report.html)\n- [NHANES report](nhanes/report.html)\n- [Source manifest](nhanes/provenance_manifest.json)\n- [Software acceptance](validation.json)\n- [Protocol](../docs/PROTOCOL.md)\n- [Dictionary](../docs/data_dictionary.csv)\n- [NHANES methods](../docs/NHANES_METHODS.md)\n\n岗位覆盖是基于职责相似性的判断，不代表招聘结果或工作经验认证。投递 HPRC 时，将此项目放在研究数据与流程能力的位置；已有研究支持、沟通、协作经历仍应单独列出。\n"
-    (ROOT / "reports" / "FINAL_PROJECT_REPORT.md").write_text(md, encoding="utf-8")
+    legacy = ROOT / "reports" / "legacy"
+    legacy.mkdir(exist_ok=True)
+    (legacy / "FINAL_PROJECT_REPORT_V1.md").write_text(md, encoding="utf-8")
     def table(headers, rows):
         return "<div class='table-wrap'><table><thead><tr>" + "".join(f"<th>{escape(x)}</th>" for x in headers) + "</tr></thead><tbody>" + "".join("<tr>" + "".join(f"<td>{escape(str(cell))}</td>" for cell in row) + "</tr>" for row in rows) + "</tbody></table></div>"
     def listing(items):
@@ -92,8 +94,8 @@ def main():
 *{{box-sizing:border-box}}body{{background:#edf3f5;color:#18384b;font:15px/1.75 'Segoe UI','Microsoft YaHei',sans-serif;margin:0}}main{{max-width:1080px;margin:30px auto;background:white;padding:44px 52px;border-top:8px solid #087f83}}h1{{font-size:32px;line-height:1.3}}h2{{font-size:22px;border-top:1px solid #dce5e9;padding-top:23px;margin-top:32px}}.kicker{{font-size:12px;letter-spacing:2px;color:#087f83;font-weight:700}}.intro{{color:#526b78}}.evidence{{background:#e9f6f4;padding:16px;border-left:4px solid #087f83}}table{{width:100%;border-collapse:collapse;font-size:13px}}th,td{{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid #dce5e9}}th{{background:#eef5f7}}a{{color:#087f83}}li{{margin-bottom:10px}}blockquote{{margin:16px 0;padding:20px 25px;background:#f1f6f8;border-left:4px solid #6da1ae}}code{{word-break:break-all;font-size:12px}}.muted{{font-size:12px;color:#647c89}}.resume{{background:#f7fafb;border:1px solid #dbe6eb;padding:20px 24px}}@media(max-width:700px){{main{{margin:0;padding:24px}}.table-wrap{{overflow-x:auto}}h1{{font-size:26px}}}}@media print{{@page{{size:A4;margin:16mm}}body{{background:white;font-size:11px}}main{{margin:0;padding:0;max-width:none}}h1{{font-size:25px}}h2{{font-size:17px}}table{{font-size:10px}}th,td{{padding:7px}}.resume,blockquote{{break-inside:avoid}}}}
 </style></head><body><main><div class="kicker">COMPLETED PORTFOLIO / MEASURED EVIDENCE</div><h1>{escape(title)}</h1><p class="intro">{escape(intro)}</p><p><a href="{repo}">GitHub 仓库</a> · <a href="{ci}">已通过的 Windows / Ubuntu CI</a></p><p class="muted">Verified source: <code>{source}</code></p><div class="evidence">已完成可运行软件、合成问题基准、真实公开数据分析及求职表述。所有数值均取自保存的实际运行证据。</div>
 <h2>实际交付与验收</h2>{table(['证据','实际结果','解释'],metrics)}<h2>功能与岗位相关性</h2>{table(['交付','具体内容'],features)}{table(['岗位方向','项目证据','仍需真实经历补充'],fit)}<h2>英文简历条目</h2><div class="resume"><strong>Behavioral Research Data Workbench | Independent Portfolio Project</strong><p>Python · pandas · SQLite · Streamlit</p>{listing(bullets)}</div><p>数据或软件岗位可选择：</p><blockquote>{escape(technical)}</blockquote><h2>中文项目说明</h2><p>搭建行为研究数据工作台，完成合成筛选/随访数据管理、44 字段字典、质量检查和可追溯修订；固定合成基准的 42 个预设问题匹配全部检出、无额外报警；另整合 CDC NHANES 三张公开数据表，完成 8,324 名成人配对样本的描述性分析。</p><h2>60 秒英文面试说明</h2><blockquote>{escape(story)}</blockquote><h2>值得解释的修复与取舍</h2>{listing(lessons)}<h2>五分钟演示路线</h2>{listing(demo)}<h2>表述边界与下一步</h2>{listing(limitations)}<h2>可核查证据</h2><p><a href="quality/evaluation.json">质量评估</a> · <a href="study_report.html">一页研究报告</a> · <a href="nhanes/report.html">真实数据报告</a> · <a href="nhanes/provenance_manifest.json">来源与哈希</a> · <a href="validation.json">软件验收</a> · <a href="../docs/PROTOCOL.md">研究方案</a></p><p class="muted">岗位覆盖基于职责相似性判断，不代表招聘结果或工作经历认证。研究支持、参与者沟通及协作经历应在简历中单独陈述。</p></main></body></html>"""
-    (ROOT / "reports" / "FINAL_PROJECT_REPORT.html").write_text(html, encoding="utf-8")
-    print(str(ROOT / "reports" / "FINAL_PROJECT_REPORT.html"))
+    (legacy / "FINAL_PROJECT_REPORT_V1.html").write_text(html, encoding="utf-8")
+    print(str(legacy / "FINAL_PROJECT_REPORT_V1.html"))
 
 
 if __name__ == "__main__":

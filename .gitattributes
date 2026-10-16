@@ -1,2 +1,2 @@
-* text=auto eol=lf
-*.png binary
+# Scientific artifacts retain their exact published bytes and provenance checksums.
+reports/research/** -text whitespace=cr-at-eol

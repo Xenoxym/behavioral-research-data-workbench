@@ -30,7 +30,7 @@ def run():
     env = dict(os.environ, WORKBENCH_DB_PATH=str(db))
     pages, errors = [], []
     with (artifact / "server.log").open("w", encoding="utf-8") as log:
-        server = subprocess.Popen([sys.executable, "-m", "streamlit", "run", "app.py", "--server.address", "127.0.0.1", "--server.port", str(port), "--server.headless", "true", "--browser.gatherUsageStats", "false"], cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+        server = subprocess.Popen([sys.executable, "-m", "streamlit", "run", "legacy_app.py", "--server.address", "127.0.0.1", "--server.port", str(port), "--server.headless", "true", "--browser.gatherUsageStats", "false"], cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
         try:
             url = f"http://127.0.0.1:{port}"
             deadline = time.monotonic() + 45
