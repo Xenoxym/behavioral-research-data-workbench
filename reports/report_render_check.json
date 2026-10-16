@@ -1,0 +1,21 @@
+{
+  "reports": [
+    {
+      "report": "FINAL_PROJECT_REPORT.html",
+      "horizontal_overflow": false,
+      "headings": 1
+    },
+    {
+      "report": "study_report.html",
+      "horizontal_overflow": false,
+      "headings": 1
+    },
+    {
+      "report": "nhanes/report.html",
+      "horizontal_overflow": false,
+      "headings": 1
+    }
+  ],
+  "page_errors": [],
+  "status": "passed"
+}

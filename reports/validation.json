@@ -1,0 +1,51 @@
+{
+  "recorded_at_utc": "2026-10-16T23:04:05.505989+00:00",
+  "validated_source_commit": "ee50aa3b7c117c6d99acad992eec669e66e8e311",
+  "local_pytest": {
+    "tests": 97,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 36.922,
+    "junit_sha256": "a8e34360cfb3d1f6d25f311bcefc650b0bca20641cebc5c6c8a8064bdf99e300"
+  },
+  "browser": {
+    "status": "passed",
+    "pages": [
+      "Overview",
+      "Quality review",
+      "Follow-up",
+      "Corrections & audit",
+      "Data dictionary",
+      "Public data",
+      "Reports"
+    ],
+    "page_errors": [],
+    "persistent_corrections": 1,
+    "downloaded": [
+      "followup.csv",
+      "study_report.html"
+    ],
+    "browser": "Chromium",
+    "isolation": "Unique disposable local database; no actual communications"
+  },
+  "ci": {
+    "url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38979236941",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "ee50aa3b7c117c6d99acad992eec669e66e8e311",
+    "jobs": [
+      {
+        "name": "test (ubuntu-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38979236941/job/117235928343"
+      },
+      {
+        "name": "test (windows-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38979236941/job/117235928710"
+      }
+    ]
+  },
+  "interpretation": "Finite software acceptance and synthetic defect evaluation, not clinical validation or real participant experience."
+}
