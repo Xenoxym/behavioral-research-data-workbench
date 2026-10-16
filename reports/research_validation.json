@@ -1,0 +1,528 @@
+{
+  "recorded_at_utc": "2026-10-16T23:43:12.089638+00:00",
+  "validated_source_commit": "4c05d718c6bcf93a0d14d32beec7c5fe9f249a0d",
+  "local_pytest": {
+    "tests": 152,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "local_seconds": 43.595,
+  "browser": {
+    "status": "passed",
+    "app": "Real-data Tobacco Exposure Equity Study",
+    "pages": [
+      "Study overview",
+      "Questions & methods",
+      "Weighted results",
+      "Sensitivity & selection",
+      "Sources & provenance",
+      "Research report"
+    ],
+    "page_errors": [],
+    "console_errors": [],
+    "downloaded": [
+      "selected_weighted_estimates.csv",
+      "missingness.csv",
+      "research_evidence.zip",
+      "RESEARCH_REPORT.html"
+    ],
+    "browser": "Chromium",
+    "real_periods": [
+      "I",
+      "L",
+      "P"
+    ],
+    "isolation": "Read-only saved aggregate artifacts; own local server; no source download or synthetic generation",
+    "verified_environment": "Ubuntu GitHub Actions",
+    "workflow_url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982480892",
+    "validated_source_commit": "4c05d718c6bcf93a0d14d32beec7c5fe9f249a0d",
+    "selected_download_group_verified": "education"
+  },
+  "offline_replay": {
+    "recorded_at_utc": "2026-10-16T23:33:32.342157+00:00",
+    "status": "passed",
+    "mode": "full validated-cache preparation + R survey inference + report, offline=True",
+    "analytic_input_identical": true,
+    "source_bytes_and_retrieval_times_preserved": true,
+    "scientific_tables_identical": {
+      "estimates.csv": true,
+      "contrasts.csv": true,
+      "models.csv": true,
+      "sensitivities.csv": true,
+      "missingness.csv": true
+    },
+    "scientific_table_sha256": {
+      "estimates.csv": "abd6ceb927d52aac65b319467940e83c00293724aaed068d5ca9a5cc542c3749",
+      "contrasts.csv": "657753f1dfaa7ac8baebf6d2c9455bfc493cc5dd70be33b87b25fa1f2779c721",
+      "models.csv": "6f2bfa434e20e3f2477d93451955a6b7df25196eb1ea489e5c1356f425e5ccbf",
+      "sensitivities.csv": "28b1bfda6c8c73f12f48bd8a64ba8af334117a17e75ff02115068eeb765cba23",
+      "missingness.csv": "645751c915b35f815826940b1ff934bd5af9b4ee947c52380219f58177346483"
+    },
+    "excluded_from_byte_comparison": "Generated timestamps, run metadata and rendered figures; scientific CSVs compared exactly."
+  },
+  "ci": {
+    "url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982480892",
+    "conclusion": "success",
+    "headSha": "4c05d718c6bcf93a0d14d32beec7c5fe9f249a0d",
+    "jobs": [
+      {
+        "completedAt": "2026-10-16T23:42:10Z",
+        "conclusion": "success",
+        "databaseId": 117246289983,
+        "name": "test (ubuntu-latest)",
+        "startedAt": "2026-10-16T23:38:21Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-16T23:38:24Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-16T23:38:23Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:27Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-10-16T23:38:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:27Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-10-16T23:38:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:39:08Z",
+            "conclusion": "success",
+            "name": "Run r-lib/actions/setup-r@v2",
+            "number": 4,
+            "startedAt": "2026-10-16T23:38:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:32Z",
+            "conclusion": "success",
+            "name": "Install authoritative survey engine",
+            "number": 5,
+            "startedAt": "2026-10-16T23:39:08Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:32Z",
+            "conclusion": "skipped",
+            "name": "Validate project-local Windows setup",
+            "number": 6,
+            "startedAt": "2026-10-16T23:40:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:34Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install uv",
+            "number": 7,
+            "startedAt": "2026-10-16T23:40:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:37Z",
+            "conclusion": "success",
+            "name": "Run uv sync --frozen --extra dev",
+            "number": 8,
+            "startedAt": "2026-10-16T23:40:34Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:37Z",
+            "conclusion": "success",
+            "name": "Run uv run ruff check .",
+            "number": 9,
+            "startedAt": "2026-10-16T23:40:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:25Z",
+            "conclusion": "success",
+            "name": "Run uv run pytest -q --junitxml=artifacts/junit.xml",
+            "number": 10,
+            "startedAt": "2026-10-16T23:40:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:26Z",
+            "conclusion": "success",
+            "name": "Run uv run research-workbench demo",
+            "number": 11,
+            "startedAt": "2026-10-16T23:41:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:27Z",
+            "conclusion": "success",
+            "name": "Run uv run research-workbench evaluate",
+            "number": 12,
+            "startedAt": "2026-10-16T23:41:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:29Z",
+            "conclusion": "success",
+            "name": "Run uv run research-workbench report",
+            "number": 13,
+            "startedAt": "2026-10-16T23:41:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:49Z",
+            "conclusion": "success",
+            "name": "Install browser for real research acceptance",
+            "number": 14,
+            "startedAt": "2026-10-16T23:41:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:42:04Z",
+            "conclusion": "success",
+            "name": "Exercise saved real research in Chromium",
+            "number": 15,
+            "startedAt": "2026-10-16T23:41:49Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:42:06Z",
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 16,
+            "startedAt": "2026-10-16T23:42:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:42:07Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 31,
+            "startedAt": "2026-10-16T23:42:06Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:42:07Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 32,
+            "startedAt": "2026-10-16T23:42:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:42:07Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 33,
+            "startedAt": "2026-10-16T23:42:07Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982480892/job/117246289983"
+      },
+      {
+        "completedAt": "2026-10-16T23:40:24Z",
+        "conclusion": "success",
+        "databaseId": 117246290126,
+        "name": "test (windows-latest)",
+        "startedAt": "2026-10-16T23:38:21Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-16T23:38:24Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-16T23:38:22Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:30Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-10-16T23:38:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:30Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-10-16T23:38:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:30Z",
+            "conclusion": "skipped",
+            "name": "Run r-lib/actions/setup-r@v2",
+            "number": 4,
+            "startedAt": "2026-10-16T23:38:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:30Z",
+            "conclusion": "skipped",
+            "name": "Install authoritative survey engine",
+            "number": 5,
+            "startedAt": "2026-10-16T23:38:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:53Z",
+            "conclusion": "success",
+            "name": "Validate project-local Windows setup",
+            "number": 6,
+            "startedAt": "2026-10-16T23:38:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:39:00Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install uv",
+            "number": 7,
+            "startedAt": "2026-10-16T23:38:53Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:39:19Z",
+            "conclusion": "success",
+            "name": "Run uv sync --frozen --extra dev",
+            "number": 8,
+            "startedAt": "2026-10-16T23:39:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:39:20Z",
+            "conclusion": "success",
+            "name": "Run uv run ruff check .",
+            "number": 9,
+            "startedAt": "2026-10-16T23:39:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:13Z",
+            "conclusion": "success",
+            "name": "Run uv run pytest -q --junitxml=artifacts/junit.xml",
+            "number": 10,
+            "startedAt": "2026-10-16T23:39:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:15Z",
+            "conclusion": "success",
+            "name": "Run uv run research-workbench demo",
+            "number": 11,
+            "startedAt": "2026-10-16T23:40:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:17Z",
+            "conclusion": "success",
+            "name": "Run uv run research-workbench evaluate",
+            "number": 12,
+            "startedAt": "2026-10-16T23:40:15Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:19Z",
+            "conclusion": "success",
+            "name": "Run uv run research-workbench report",
+            "number": 13,
+            "startedAt": "2026-10-16T23:40:17Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:19Z",
+            "conclusion": "skipped",
+            "name": "Install browser for real research acceptance",
+            "number": 14,
+            "startedAt": "2026-10-16T23:40:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:19Z",
+            "conclusion": "skipped",
+            "name": "Exercise saved real research in Chromium",
+            "number": 15,
+            "startedAt": "2026-10-16T23:40:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:21Z",
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 16,
+            "startedAt": "2026-10-16T23:40:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:21Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 31,
+            "startedAt": "2026-10-16T23:40:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:23Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 32,
+            "startedAt": "2026-10-16T23:40:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:23Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 33,
+            "startedAt": "2026-10-16T23:40:23Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982480892/job/117246290126"
+      }
+    ]
+  },
+  "full_real_data_reproduction": {
+    "url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982482964",
+    "conclusion": "success",
+    "headSha": "4c05d718c6bcf93a0d14d32beec7c5fe9f249a0d",
+    "jobs": [
+      {
+        "completedAt": "2026-10-16T23:41:08Z",
+        "conclusion": "success",
+        "databaseId": 117246300171,
+        "name": "real-data",
+        "startedAt": "2026-10-16T23:38:23Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-16T23:38:25Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-16T23:38:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:26Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-10-16T23:38:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:38:26Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-10-16T23:38:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:39:09Z",
+            "conclusion": "success",
+            "name": "Run r-lib/actions/setup-r@v2",
+            "number": 4,
+            "startedAt": "2026-10-16T23:38:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:35Z",
+            "conclusion": "success",
+            "name": "Install R survey",
+            "number": 5,
+            "startedAt": "2026-10-16T23:39:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:38Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install uv",
+            "number": 6,
+            "startedAt": "2026-10-16T23:40:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:40Z",
+            "conclusion": "success",
+            "name": "Run uv sync --frozen --extra dev",
+            "number": 7,
+            "startedAt": "2026-10-16T23:40:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:54Z",
+            "conclusion": "success",
+            "name": "Run uv run research-workbench research",
+            "number": 8,
+            "startedAt": "2026-10-16T23:40:40Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:40:54Z",
+            "conclusion": "success",
+            "name": "Run uv run python scripts/compare_research_release.py",
+            "number": 9,
+            "startedAt": "2026-10-16T23:40:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:04Z",
+            "conclusion": "success",
+            "name": "Run uv run python scripts/verify_research_replay.py",
+            "number": 10,
+            "startedAt": "2026-10-16T23:40:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:05Z",
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 11,
+            "startedAt": "2026-10-16T23:41:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:05Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 21,
+            "startedAt": "2026-10-16T23:41:05Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:06Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 22,
+            "startedAt": "2026-10-16T23:41:05Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T23:41:06Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-16T23:41:06Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982482964/job/117246300171"
+      }
+    ]
+  },
+  "scope": "Software/statistical consistency and reproducibility; not clinical validation or proof of absence of observational bias."
+}

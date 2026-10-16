@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "reference": "committed Git HEAD scientific tables and source checksums",
+  "source_count": 17,
+  "all_source_bytes_identical": true,
+  "numeric_tolerance": {
+    "relative": 1e-09,
+    "absolute": 1e-11
+  },
+  "tables": {
+    "estimates.csv": {
+      "matched": true,
+      "rows": 42,
+      "columns": 12
+    },
+    "contrasts.csv": {
+      "matched": true,
+      "rows": 6,
+      "columns": 8
+    },
+    "models.csv": {
+      "matched": true,
+      "rows": 93,
+      "columns": 14
+    },
+    "sensitivities.csv": {
+      "matched": true,
+      "rows": 36,
+      "columns": 17
+    },
+    "missingness.csv": {
+      "matched": true,
+      "rows": 24,
+      "columns": 13
+    }
+  },
+  "verified_environment": "Ubuntu GitHub Actions, freshly downloaded official sources",
+  "workflow_url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982482964",
+  "validated_source_commit": "4c05d718c6bcf93a0d14d32beec7c5fe9f249a0d",
+  "canonical_input_identical_to_windows": true,
+  "remote_offline_replay_passed": true
+}

@@ -9,6 +9,8 @@ observations come from CDC; no synthetic participants enter the research results
 AI assists research planning and software development; inspectable Python/R code
 calculates the findings. There is no LLM-based outcome generation or prediction API.
 
+![Real-data research overview](docs/screenshots/research_study_overview.png)
+
 Read the [research report](reports/RESEARCH_REPORT.md) or its
 [standalone illustrated HTML](reports/RESEARCH_REPORT.html).
 The [final project and job-application report](reports/FINAL_PROJECT_REPORT.md) explains
@@ -93,6 +95,14 @@ CI checks Python and R reference calculations on Windows/Ubuntu. A separate manu
 **Reproduce real CDC research** workflow downloads and reruns the whole study, then
 checks its offline replay. No credentials or paid APIs are used in these workflows.
 
+Verified release: **152 tests passed locally and on each CI platform**, with no skips;
+Chromium exercised all six real-data pages and four downloads. An independent Ubuntu
+run freshly downloaded every source and reproduced the scientific tables within
+floating-point tolerance, then passed its byte-identical offline replay.
+See [software/browser CI](https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982480892),
+[full independent reproduction](https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982482964),
+and [saved acceptance evidence](reports/research_validation.json).
+
 ## Research decisions that matter
 
 1. **Inspect original files as well as codebooks.** COT_L requires WTPH2YR but omits its
@@ -128,6 +138,7 @@ Frozen analysis plan → R survey domains → estimates / contrasts / models / s
 - [Primary/subgroup estimates](reports/research/estimates.csv), [contrasts](reports/research/contrasts.csv), [models](reports/research/models.csv)
 - [Sensitivity analyses](reports/research/sensitivities.csv) and [missingness audit](reports/research/missingness.csv)
 - [Pipeline hashes](reports/research/pipeline_run.json) and [offline replay evidence](reports/research/replay_validation.json)
+- [Independent cross-platform result comparison](reports/research/cross_platform_validation.json)
 
 The original [V1 workbench](LEGACY_README.md) remains a separate, explicitly synthetic
 operations demonstration (`legacy_app.py`). Its contacts/visits are never treated as

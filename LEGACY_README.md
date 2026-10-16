@@ -13,9 +13,9 @@ no messages are sent, and no treatment or diagnostic claims are made.
 
 ![Synthetic study overview](docs/screenshots/overview.png)
 
-The [final portfolio and job-application report](reports/FINAL_PROJECT_REPORT.md)
+The [historical V1 portfolio report](reports/legacy/FINAL_PROJECT_REPORT_V1.md)
 contains measured acceptance results, bilingual resume wording, an interview explanation,
-and a five-minute demonstration route. A [standalone HTML version](reports/FINAL_PROJECT_REPORT.html)
+and a five-minute demonstration route. A [standalone HTML version](reports/legacy/FINAL_PROJECT_REPORT_V1.html)
 is available for reading or browser printing.
 
 ## Run locally
@@ -26,11 +26,11 @@ Docker, or separate database service is required.
 ```powershell
 uv sync --frozen
 uv run research-workbench demo
-uv run streamlit run app.py --server.address 127.0.0.1 --browser.gatherUsageStats false
+uv run streamlit run legacy_app.py --server.address 127.0.0.1 --browser.gatherUsageStats false
 ```
 
-Open **http://localhost:8501**. On Windows, `scripts/setup.ps1` prepares the environment and
-demo; `start_workbench.cmd` starts the application. Starting the app on an empty database
+Open **http://localhost:8501**. Use the explicit legacy command above; the current setup
+and launcher start the real-data study. Starting the legacy app on an empty database
 shows an explicit **Load synthetic demo** action. An existing database and its corrections
 are preserved. Close the terminal or press Ctrl+C to stop the app.
 

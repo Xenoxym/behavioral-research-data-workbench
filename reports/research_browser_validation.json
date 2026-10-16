@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "app": "Real-data Tobacco Exposure Equity Study",
+  "pages": [
+    "Study overview",
+    "Questions & methods",
+    "Weighted results",
+    "Sensitivity & selection",
+    "Sources & provenance",
+    "Research report"
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "downloaded": [
+    "selected_weighted_estimates.csv",
+    "missingness.csv",
+    "research_evidence.zip",
+    "RESEARCH_REPORT.html"
+  ],
+  "browser": "Chromium",
+  "real_periods": [
+    "I",
+    "L",
+    "P"
+  ],
+  "isolation": "Read-only saved aggregate artifacts; own local server; no source download or synthetic generation",
+  "verified_environment": "Ubuntu GitHub Actions",
+  "workflow_url": "https://github.com/Xenoxym/behavioral-research-data-workbench/actions/runs/38982480892",
+  "validated_source_commit": "4c05d718c6bcf93a0d14d32beec7c5fe9f249a0d",
+  "selected_download_group_verified": "education"
+}
