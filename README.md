@@ -8,6 +8,13 @@ NHANES case demonstrates actual public questionnaire/laboratory data handling.
 The public-data case is cross-sectional and unweighted. No participants are recruited,
 no messages are sent, and no treatment or diagnostic claims are made.
 
+![Synthetic study overview](docs/screenshots/overview.png)
+
+The [final portfolio and job-application report](reports/FINAL_PROJECT_REPORT.md)
+contains measured acceptance results, bilingual resume wording, an interview explanation,
+and a five-minute demonstration route. A [standalone HTML version](reports/FINAL_PROJECT_REPORT.html)
+is available for reading or browser printing.
+
 ## Run locally
 
 Python 3.12 and [uv](https://docs.astral.sh/uv/) are recommended. No GPU, hardware, API key,

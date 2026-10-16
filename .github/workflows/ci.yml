@@ -1,5 +1,10 @@
 name: Verify research workbench
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths-ignore: ['**.md', 'reports/**', 'docs/screenshots/**']
+  pull_request:
+    paths-ignore: ['**.md', 'reports/**', 'docs/screenshots/**']
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:

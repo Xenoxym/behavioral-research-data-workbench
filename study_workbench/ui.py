@@ -100,7 +100,7 @@ def _chart(frame: pd.DataFrame, x: str, y: str, color: str | None = None) -> Non
         plot_bgcolor="rgba(0,0,0,0)", font=dict(color=NAVY),
         xaxis_title=None, yaxis_title="Records", showlegend=color is not None,
     )
-    st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
+    st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
 
 
 def _empty() -> None:
@@ -152,7 +152,7 @@ def _overview(bundle: dict[str, pd.DataFrame], issues: pd.DataFrame, as_of: str)
         st.caption("Pending visits include future appointments. Only opened windows enter the completion denominator.")
     st.subheader("Working data")
     table = st.selectbox("Explore table", list(bundle), key="overview_table")
-    st.dataframe(bundle[table], hide_index=True, use_container_width=True, height=300)
+    st.dataframe(bundle[table], hide_index=True, width="stretch", height=300)
     st.download_button("Download this table", _csv(bundle[table]), f"synthetic_{table}.csv", "text/csv")
     with st.expander("How to read these numbers"):
         st.write(
@@ -182,7 +182,7 @@ def _quality(bundle: dict[str, pd.DataFrame], issues: pd.DataFrame) -> None:
             st.success("No automated findings in the current working data.")
             st.caption("Use the injected-error benchmark to inspect known defects and legitimate special cases.")
         else:
-            st.dataframe(filtered, hide_index=True, use_container_width=True)
+            st.dataframe(filtered, hide_index=True, width="stretch")
         st.download_button("Download current findings", _csv(filtered), "synthetic_quality_findings.csv", "text/csv")
     with tab_benchmark:
         st.info("Independent synthetic benchmark. These injected records never replace your working database.")
@@ -198,7 +198,7 @@ def _quality(bundle: dict[str, pd.DataFrame], issues: pd.DataFrame) -> None:
         if result:
             st.write(f"Known injected defect labels: **{result['truth_count']}**. Clean-data findings: **{result['clean_count']}**.")
             st.json(result["evaluation"], expanded=True)
-            st.dataframe(result["findings"], hide_index=True, use_container_width=True)
+            st.dataframe(result["findings"], hide_index=True, width="stretch")
             st.caption("Matches are deduplicated by rule, table, row, and field. Detection rates describe this synthetic benchmark only.")
         else:
             st.caption("Run the benchmark to measure actual true positives, false positives, and false negatives.")
@@ -226,14 +226,14 @@ def _followup(bundle: dict[str, pd.DataFrame], as_of: str) -> None:
     query = st.text_input("Filter participant ID", placeholder="For example: SYN-0001")
     if query:
         queue = queue.loc[queue["participant_id"].astype(str).str.contains(query, case=False, regex=False)]
-    st.dataframe(queue, hide_index=True, use_container_width=True, height=420)
+    st.dataframe(queue, hide_index=True, width="stretch", height=420)
     st.download_button("Download follow-up queue", _csv(queue), f"synthetic_followup_{as_of}.csv", "text/csv")
     st.caption(
         "An open window may still be pending. A visit becomes overdue after window_end. "
         "Missing or invalid windows require data review and are excluded from due counts."
     )
     with st.expander("Recorded contact attempts — synthetic"):
-        st.dataframe(bundle["contacts"], hide_index=True, use_container_width=True)
+        st.dataframe(bundle["contacts"], hide_index=True, width="stretch")
         st.caption("No real phone numbers or email addresses are stored. This application never sends notifications.")
 
 
@@ -257,7 +257,7 @@ def _corrections(storage: Storage, bundle: dict[str, pd.DataFrame]) -> None:
     current = row[field]
     current_text = "" if pd.isna(current) else str(current)
     st.caption(f"Participant: {row['participant_id']} · Current value: {current_text or '(missing)'}")
-    st.dataframe(frame.loc[frame["row_id"].astype(str).eq(row_id)], hide_index=True, use_container_width=True)
+    st.dataframe(frame.loc[frame["row_id"].astype(str).eq(row_id)], hide_index=True, width="stretch")
     with st.form("correction_form"):
         value = st.text_input("New value", value=current_text, key=f"new_value_{table}_{row_id}_{field}")
         col_actor, col_reason = st.columns([1, 2])
@@ -281,7 +281,7 @@ def _corrections(storage: Storage, bundle: dict[str, pd.DataFrame]) -> None:
     if audit.empty:
         st.info("No corrections yet. Every saved correction requires a reviewer and a reason.")
     else:
-        st.dataframe(audit, hide_index=True, use_container_width=True)
+        st.dataframe(audit, hide_index=True, width="stretch")
     st.download_button("Download audit CSV", _csv(audit), "synthetic_correction_audit.csv", "text/csv")
 
 
@@ -299,7 +299,7 @@ def _dictionary() -> None:
     table_column = "table" if "table" in dictionary else dictionary.columns[0]
     selected = st.selectbox("Dictionary table", ["All"] + dictionary[table_column].unique().tolist())
     filtered = dictionary if selected == "All" else dictionary.loc[dictionary[table_column].eq(selected)]
-    st.dataframe(filtered, hide_index=True, use_container_width=True, height=500)
+    st.dataframe(filtered, hide_index=True, width="stretch", height=500)
     st.download_button("Download full data dictionary", path.read_bytes(), "data_dictionary.csv", "text/csv")
 
 
@@ -378,7 +378,7 @@ def main() -> None:
         st.divider()
         as_of = st.date_input("Study as-of date", value=date(2026, 10, 16)).isoformat()
         st.caption("Metrics use this date, not your computer clock.")
-        if st.button("Load synthetic demo", type="primary", disabled=has_data, use_container_width=True):
+        if st.button("Load synthetic demo", type="primary", disabled=has_data, width="stretch"):
             storage.import_bundle(generate_clean(seed=42, n=240), source_name="synthetic_clean_seed42")
             st.session_state["demo_flash"] = True
             st.rerun()
