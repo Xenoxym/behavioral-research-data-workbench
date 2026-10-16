@@ -1,5 +1,19 @@
 # Project agreement
 
+## V2 user steering (supersedes the V1 product emphasis below)
+
+The user found the demo/synthetic-led V1 insufficient and now explicitly wants active,
+substantive independent research using entirely real public data collected from original
+sources. AI assistance is allowed; the goal is research judgment, not an AI wrapper.
+The main UI and new final report must focus on the real-data study. Keep V1 synthetic
+operations as a clearly separated legacy artifact, never mix them into research findings.
+Use the frozen docs/RESEARCH_PLAN_V2.md, record deviations, preserve all source/analysis
+provenance, and report null or contrary results honestly. Continue autonomous parallel
+work and milestone GitHub pushes. Original measurements belong to CDC/NHANES; describe
+our work as independently collecting public source files and secondary analysis, not
+personally recruiting participants or taking samples. R survey may be installed under
+project-local .tools for validated traditional survey inference; do not alter global PATH.
+
 ## Authorized scope
 
 Build Behavioral Research Data Workbench as a local Python application using pandas,
