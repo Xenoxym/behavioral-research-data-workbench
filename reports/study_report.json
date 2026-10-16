@@ -1,0 +1,96 @@
+{
+  "as_of": "2026-10-16",
+  "data_label": "SYNTHETIC DEMONSTRATION",
+  "screened": 240,
+  "eligible": 200,
+  "enrolled": 182,
+  "withdrawn": 13,
+  "mean_age": 47.87362637362637,
+  "baseline_records": 182,
+  "ema_prompts": 2409,
+  "ema_answered": 1172,
+  "ema_response_rate": 0.48650892486508923,
+  "followup": {
+    "as_of": "2026-10-16",
+    "due_visits": 205,
+    "completed_due_visits": 174,
+    "completion_rate": 0.848780487804878,
+    "overdue_visits": 21,
+    "withdrawn_visits": 21,
+    "pending_visits": 148,
+    "denominator_definition": "Windows opened by as-of; exclude withdrawals during/before window unless already overdue at withdrawal; numerator includes observed completions only."
+  },
+  "followup_error": null,
+  "missingness": [
+    {
+      "table": "baseline",
+      "field": "cigarettes_per_day",
+      "missing": 0,
+      "expected": 182,
+      "missing_rate": 0.0
+    },
+    {
+      "table": "baseline",
+      "field": "readiness",
+      "missing": 0,
+      "expected": 182,
+      "missing_rate": 0.0
+    },
+    {
+      "table": "baseline",
+      "field": "co_ppm",
+      "missing": 0,
+      "expected": 182,
+      "missing_rate": 0.0
+    },
+    {
+      "table": "baseline",
+      "field": "nicotine_replacement",
+      "missing": 0,
+      "expected": 182,
+      "missing_rate": 0.0
+    },
+    {
+      "table": "visits",
+      "field": "cigarettes_7d",
+      "missing": 0,
+      "expected": 174,
+      "missing_rate": 0.0
+    },
+    {
+      "table": "visits",
+      "field": "abstinent_7d",
+      "missing": 0,
+      "expected": 174,
+      "missing_rate": 0.0
+    },
+    {
+      "table": "visits",
+      "field": "co_ppm",
+      "missing": 10,
+      "expected": 174,
+      "missing_rate": 0.05747126436781609
+    },
+    {
+      "table": "ema",
+      "field": "urge",
+      "missing": 0,
+      "expected": 1172,
+      "missing_rate": 0.0
+    },
+    {
+      "table": "ema",
+      "field": "stress",
+      "missing": 0,
+      "expected": 1172,
+      "missing_rate": 0.0
+    }
+  ],
+  "table_rows": {
+    "participants": 240,
+    "baseline": 182,
+    "visits": 364,
+    "ema": 2409,
+    "contacts": 240
+  }
+}

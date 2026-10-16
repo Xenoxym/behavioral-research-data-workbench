@@ -1,0 +1,72 @@
+{
+  "analysis": "NHANES adult cigarette responses and serum cotinine",
+  "cycle": "2017-March 2020 pre-pandemic",
+  "generated_at_utc": "2026-10-16T22:51:39+00:00",
+  "checksum_algorithm": "SHA-256",
+  "sources": [
+    {
+      "name": "P_DEMO",
+      "cycle": "2017-March 2020 pre-pandemic",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_DEMO.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_DEMO.htm",
+      "sha256": "2e46c6c26bf77cd8989f64011ace12cbf42c0f3e03414eb59acc5328c8f87913",
+      "bytes": 3614720,
+      "retrieved_at_utc": "2026-10-16T22:47:56+00:00",
+      "cached": true,
+      "verified_at_utc": "2026-10-16T22:51:39+00:00",
+      "records": 15560,
+      "selected_columns": [
+        "SEQN",
+        "SDDSRVYR",
+        "RIDAGEYR",
+        "RIDSTATR",
+        "WTMECPRP",
+        "SDMVSTRA",
+        "SDMVPSU"
+      ],
+      "xport_zero_artifacts_normalized": {
+        "RIDAGEYR": 574,
+        "WTMECPRP": 1260
+      }
+    },
+    {
+      "name": "P_SMQ",
+      "cycle": "2017-March 2020 pre-pandemic",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_SMQ.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_SMQ.htm",
+      "sha256": "29b7f6c59ab570c042c866312f0eb4329009e85fadbda6f9427a8bf31ecb3a3f",
+      "bytes": 1428560,
+      "retrieved_at_utc": "2026-10-16T22:47:56+00:00",
+      "cached": true,
+      "verified_at_utc": "2026-10-16T22:51:39+00:00",
+      "records": 11137,
+      "selected_columns": [
+        "SEQN",
+        "SMQ020",
+        "SMQ040"
+      ],
+      "xport_zero_artifacts_normalized": {}
+    },
+    {
+      "name": "P_COT",
+      "cycle": "2017-March 2020 pre-pandemic",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_COT.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_COT.htm",
+      "sha256": "2c98920928af839775220dc9eefb553a4d01309a54addd3992a9875313e2961f",
+      "bytes": 522560,
+      "retrieved_at_utc": "2026-10-16T22:47:56+00:00",
+      "cached": true,
+      "verified_at_utc": "2026-10-16T22:51:39+00:00",
+      "records": 13027,
+      "selected_columns": [
+        "SEQN",
+        "LBXCOT",
+        "LBDCOTLC"
+      ],
+      "xport_zero_artifacts_normalized": {
+        "LBDCOTLC": 7651
+      }
+    }
+  ],
+  "methodology_file": "docs/NHANES_METHODS.md"
+}

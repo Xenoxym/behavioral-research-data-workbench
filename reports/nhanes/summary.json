@@ -1,0 +1,217 @@
+{
+  "analysis_name": "NHANES adult cigarette responses and serum cotinine",
+  "data_kind": "public_cross_sectional",
+  "cycle": "2017-March 2020 pre-pandemic",
+  "analysis_type": "unweighted analyzed-sample description",
+  "nationally_representative_estimates": false,
+  "generated_at_utc": "2026-10-16T22:51:39+00:00",
+  "counts": {
+    "demographic_records": 15560,
+    "adult_demographic_records": 9693,
+    "adult_smoking_questionnaire_records": 9693,
+    "adult_cotinine_file_records": 8965,
+    "adult_with_cotinine": 8328,
+    "adult_cotinine_missing": 1365,
+    "adult_with_classifiable_smoking": 9688,
+    "adult_unknown_smoking": 5,
+    "analyzed_sample": 8324,
+    "excluded_from_paired_sample": 1369,
+    "adult_below_lod": 2759
+  },
+  "sample_flow": [
+    {
+      "step": "All demographic records",
+      "n": 15560
+    },
+    {
+      "step": "Age at screening >=18",
+      "n": 9693
+    },
+    {
+      "step": "Classifiable cigarette responses",
+      "n": 9688
+    },
+    {
+      "step": "Also has serum cotinine result (paired sample)",
+      "n": 8324
+    }
+  ],
+  "join_validation": {
+    "key": "SEQN",
+    "cardinality": "one_to_one",
+    "cycle_code": 66,
+    "unmatched_smq_source_keys": 0,
+    "unmatched_cot_source_keys": 0,
+    "all_adult_demographic_rows_retained": true
+  },
+  "smoking_questionnaire": {
+    "smq020_response_counts": {
+      "at least 100 lifetime cigarettes": 3889,
+      "fewer than 100 lifetime cigarettes": 5799,
+      "refused": 2,
+      "do not know": 3,
+      "missing": 0
+    },
+    "smq040_response_counts": {
+      "every day": 1306,
+      "some days": 378,
+      "not at all": 2205,
+      "refused": 0,
+      "do not know": 0,
+      "missing": 5804
+    },
+    "smq040_observation_counts": {
+      "observed": 3889,
+      "expected_skip": 5804,
+      "missing_prerequisite": 0,
+      "missing_required_followup": 0
+    }
+  },
+  "cotinine": {
+    "unit": "ng/mL",
+    "lower_limit_of_detection": 0.015,
+    "below_lod_handling": "Retain CDC LLOD/sqrt(2) fill value and LBDCOTLC flag; allow published rounding (0.011 ng/mL).",
+    "biomarker_cutoff_applied": false
+  },
+  "code_mappings": {
+    "SMQ020": {
+      "1": "at least 100 lifetime cigarettes",
+      "2": "fewer than 100 lifetime cigarettes",
+      "7": "refused",
+      "9": "do not know",
+      "missing": "not observed"
+    },
+    "SMQ040": {
+      "1": "every day",
+      "2": "some days",
+      "3": "not at all",
+      "7": "refused",
+      "9": "do not know",
+      "missing": "expected skip for SMQ020=2/7/9; otherwise unavailable"
+    },
+    "LBDCOTLC": {
+      "0": "at or above LLOD",
+      "1": "below LLOD",
+      "missing": "not observed"
+    },
+    "SDDSRVYR": {
+      "66": "2017-March 2020 pre-pandemic"
+    }
+  },
+  "groups": [
+    {
+      "smoking_status": "below_100_lifetime",
+      "label": "Fewer than 100 lifetime cigarettes",
+      "n_adults": 5799,
+      "n_with_cotinine": 4961,
+      "n_missing_cotinine": 838,
+      "pct_missing_cotinine_within_group": 14.45,
+      "n_below_lod": 2079,
+      "median_cotinine_ng_ml": 0.02,
+      "q25_cotinine_ng_ml": 0.011,
+      "q75_cotinine_ng_ml": 0.073,
+      "included_in_classifiable_paired_sample": true
+    },
+    {
+      "smoking_status": "former",
+      "label": "At least 100 lifetime; now not at all",
+      "n_adults": 2205,
+      "n_with_cotinine": 1915,
+      "n_missing_cotinine": 290,
+      "pct_missing_cotinine_within_group": 13.15,
+      "n_below_lod": 672,
+      "median_cotinine_ng_ml": 0.028,
+      "q25_cotinine_ng_ml": 0.011,
+      "q75_cotinine_ng_ml": 0.307,
+      "included_in_classifiable_paired_sample": true
+    },
+    {
+      "smoking_status": "current_every_day",
+      "label": "At least 100 lifetime; now every day",
+      "n_adults": 1306,
+      "n_with_cotinine": 1118,
+      "n_missing_cotinine": 188,
+      "pct_missing_cotinine_within_group": 14.4,
+      "n_below_lod": 0,
+      "median_cotinine_ng_ml": 250.5,
+      "q25_cotinine_ng_ml": 167.25,
+      "q75_cotinine_ng_ml": 335.0,
+      "included_in_classifiable_paired_sample": true
+    },
+    {
+      "smoking_status": "current_some_days",
+      "label": "At least 100 lifetime; now some days",
+      "n_adults": 378,
+      "n_with_cotinine": 330,
+      "n_missing_cotinine": 48,
+      "pct_missing_cotinine_within_group": 12.7,
+      "n_below_lod": 7,
+      "median_cotinine_ng_ml": 92.35,
+      "q25_cotinine_ng_ml": 22.725,
+      "q75_cotinine_ng_ml": 217.5,
+      "included_in_classifiable_paired_sample": true
+    },
+    {
+      "smoking_status": "refused",
+      "label": "Smoking response refused",
+      "n_adults": 2,
+      "n_with_cotinine": 2,
+      "n_missing_cotinine": 0,
+      "pct_missing_cotinine_within_group": 0.0,
+      "n_below_lod": 0,
+      "median_cotinine_ng_ml": 317.0,
+      "q25_cotinine_ng_ml": 268.5,
+      "q75_cotinine_ng_ml": 365.5,
+      "included_in_classifiable_paired_sample": false
+    },
+    {
+      "smoking_status": "dont_know",
+      "label": "Smoking response: do not know",
+      "n_adults": 3,
+      "n_with_cotinine": 2,
+      "n_missing_cotinine": 1,
+      "pct_missing_cotinine_within_group": 33.33,
+      "n_below_lod": 1,
+      "median_cotinine_ng_ml": 0.014499999999999999,
+      "q25_cotinine_ng_ml": 0.01275,
+      "q75_cotinine_ng_ml": 0.01625,
+      "included_in_classifiable_paired_sample": false
+    },
+    {
+      "smoking_status": "missing",
+      "label": "Smoking classification unavailable",
+      "n_adults": 0,
+      "n_with_cotinine": 0,
+      "n_missing_cotinine": 0,
+      "pct_missing_cotinine_within_group": null,
+      "n_below_lod": 0,
+      "median_cotinine_ng_ml": null,
+      "q25_cotinine_ng_ml": null,
+      "q75_cotinine_ng_ml": null,
+      "included_in_classifiable_paired_sample": false
+    },
+    {
+      "smoking_status": "inconsistent",
+      "label": "Questionnaire skip inconsistency",
+      "n_adults": 0,
+      "n_with_cotinine": 0,
+      "n_missing_cotinine": 0,
+      "pct_missing_cotinine_within_group": null,
+      "n_below_lod": 0,
+      "median_cotinine_ng_ml": null,
+      "q25_cotinine_ng_ml": null,
+      "q75_cotinine_ng_ml": null,
+      "included_in_classifiable_paired_sample": false
+    }
+  ],
+  "limitations": [
+    "All counts, percentages and quantiles describe the analyzed public-use sample only. Survey weights, strata and PSUs are not applied; these are not US national estimates.",
+    "The case is cross-sectional, not a longitudinal study or randomized trial; it cannot estimate intervention effectiveness, causation, quit rates or follow-up completion.",
+    "The paired sample excludes adults without a classifiable cigarette response or an available serum cotinine result; missing biospecimens may introduce selection bias.",
+    "Fewer than 100 lifetime cigarettes is a questionnaire category, not proof of no current cigarette use or no nicotine exposure.",
+    "Cotinine reflects nicotine exposure from multiple sources, including cigarettes, secondhand exposure, nicotine replacement therapy and electronic nicotine products. Those sources and timing are not resolved by these three files.",
+    "No cotinine cutoff, clinical diagnosis, abstinence verification or honesty label is assigned. Differences between self-report and a biomarker require contextual research.",
+    "Below-detection results retain the CDC-supplied LLOD/sqrt(2) fill values (published rounded values) and detection flags. Quantiles near the detection limit are censored descriptions, not precise concentrations.",
+    "Age is age at screening and is top-coded at 80 years. The files combine 2017-2018 and the incomplete 2019-March 2020 cycle; they must not be split using these weights."
+  ]
+}

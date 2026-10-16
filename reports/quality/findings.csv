@@ -1,0 +1,43 @@
+issue_id,rule_id,severity,table,row_id,participant_id,field,message
+adff2f7debf323a6,DUPLICATE_EVENT,error,baseline,B-DUPLICATE,SYN-0017,participant_id,Repeated participant/event key.
+22d693be1232fb81,NOT_ENROLLED,error,baseline,B-NOT-ENROLLED,SYN-0001,participant_id,Research event has no documented enrollment.
+ae967906c5582579,PARTICIPANT_ORPHAN,error,baseline,B-ORPHAN,SYN-UNKNOWN,participant_id,No matching participant screening record.
+017838bcf8e77ccd,RANGE,error,baseline,B0011,SYN-0011,cigarettes_per_day,"Expected integer in [0, 100]."
+d99be97f0db4a029,INVALID_NUMBER,error,baseline,B0014,SYN-0014,readiness,Value must be a finite number.
+8e7a67c8b5b5df58,MISSING_REQUIRED,error,baseline,B0015,SYN-0015,co_ppm,Required field co_ppm is empty.
+96beeca5e0f3c4b8,DATE_ORDER,error,baseline,B0016,SYN-0016,assessed_at,Baseline precedes enrollment.
+87457f430af1a4af,DUPLICATE_EVENT,error,baseline,B0017,SYN-0017,participant_id,Repeated participant/event key.
+530f9fe51d0385ee,INVALID_CATEGORY,error,contacts,C0018,SYN-0018,channel,"Expected one of email, phone."
+1e26e744ca5c414a,DATE_ORDER,error,contacts,C0021,SYN-0021,contacted_at,Contact log precedes its screening/referral record.
+7bfc54b67f1c936d,DUPLICATE_ROW_ID,error,contacts,C0240,SYN-0240,row_id,Repeated row_id; reconcile the source records.
+778dfb7dd31b06ff,RANGE,error,ema,E0002-01,SYN-0002,urge,"Expected integer in [0, 10]."
+93015f4b8bfa52f0,MISSING_REQUIRED,error,ema,E0002-02,SYN-0002,stress,"Answered EMA requires response time, upload time and ratings."
+5d0fb88e35c4f6dd,NONRESPONSE_DATA,error,ema,E0002-04,SYN-0002,stress,Skipped EMA contains response content.
+0c81ceb8eb9ee87e,INVALID_DATE,error,ema,E0002-06,SYN-0002,responded_at,Date or timestamp cannot be parsed.
+c4c3c17215e27b7a,DATE_ORDER,error,ema,E0002-07,SYN-0002,responded_at,EMA response precedes prompt.
+fab45ec9c3e4aefc,DATE_ORDER,error,ema,E0002-08,SYN-0002,uploaded_at,Upload precedes response. Delayed uploads are permitted.
+cc3518f4ed752cab,MISSING_REQUIRED,error,ema,E0002-12,SYN-0002,uploaded_at,"Answered EMA requires response time, upload time and ratings."
+7fc60284d688e178,DUPLICATE_ID,error,participants,P-DUPLICATE,SYN-0002,participant_id,Repeated participant_id; reconcile the source records.
+a36f2c2cde5b3d34,DUPLICATE_ID,error,participants,P0002,SYN-0002,participant_id,Repeated participant_id; reconcile the source records.
+83d467138261f90c,AGE_ELIGIBILITY,error,participants,P0003,SYN-0003,age,An eligible participant must be at least 18 under the demo protocol.
+97d78e406b2a55bf,RANGE,error,participants,P0004,SYN-0004,age,"Expected integer in [0, 100]."
+55775605af8daa2c,ELIGIBILITY_CONFLICT,error,participants,P0005,SYN-0005,eligible,An ineligible screen must not be enrolled.
+78c640eb0500e5ed,ELIGIBILITY_REASON,error,participants,P0005,SYN-0005,eligibility_reason,Eligibility flag and reason disagree.
+bca0f0395a009584,MISSING_REQUIRED,error,participants,P0006,SYN-0006,consent_date,Enrollment requires documented consent and assignment.
+ddccc41e55bba87b,DATE_ORDER,error,participants,P0008,SYN-0008,enrollment_date,Enrollment precedes consent.
+bb07e8eb4fb951e3,INVALID_DATE,error,participants,P0009,SYN-0009,screening_date,Date or timestamp cannot be parsed.
+4b2ec3323f02ce59,INVALID_CATEGORY,error,participants,P0010,SYN-0010,arm,"Expected one of app, control."
+dbe5e58b109b3681,MISSING_REQUIRED,error,participants,P0020,SYN-0020,withdrawal_reason,Document the withdrawal reason.
+ef93a13d7a5ee33d,MISSING_BASELINE,error,participants,P0022,SYN-0022,participant_id,Enrolled participant has no baseline record.
+456d476fea33108f,MISSING_VISIT,error,participants,P0026,SYN-0026,participant_id,Enrolled participant lacks a planned W04 or W12 visit record.
+429cb0fc7340287b,RANGE,error,visits,V0002-W04,SYN-0002,cigarettes_7d,"Expected integer in [0, 700]."
+e56263e9b853be75,MISSING_REQUIRED,error,visits,V0002-W12,SYN-0002,completed_at,Completed visit requires a completion date.
+73897d973087dfe5,VISIT_OUTSIDE_WINDOW,review,visits,V0003-W04,SYN-0003,completed_at,Completion falls outside its protocol window; review deviation.
+89a17037a9fff862,ABSTINENCE_CONFLICT,error,visits,V0003-W12,SYN-0003,abstinent_7d,Self-reported abstinence conflicts with nonzero seven-day count.
+0283e4ecb51ed927,BIOCHEMICAL_REVIEW,review,visits,V0004-W04,SYN-0004,co_ppm,Self-reported abstinence with CO >6 ppm requires contextual review; this is not a diagnosis.
+39f3df1bc5ef3529,WINDOW_ORDER,error,visits,V0004-W12,SYN-0004,target_date,Target must lie between window start and end.
+5495ec4b2bb8bdc1,STATUS_CONFLICT,error,visits,V0005-W04,SYN-0005,status,A noncompleted visit has a completion date.
+5d275b856d13831c,RANGE,error,visits,V0005-W12,SYN-0005,abstinent_7d,"Expected integer in [0, 1]."
+88d3301239daec11,MISSING_REQUIRED,error,visits,V0006-W04,SYN-0006,cigarettes_7d,Completed measurement is missing without declined/technical reason.
+c1dbd3bb0b3e18b7,AFTER_WITHDRAWAL,error,visits,V0020-W04,SYN-0020,completed_at,Visit completion follows withdrawal.
+980cedca486b1729,VISIT_OUTSIDE_WINDOW,review,visits,V0020-W04,SYN-0020,completed_at,Completion falls outside its protocol window; review deviation.

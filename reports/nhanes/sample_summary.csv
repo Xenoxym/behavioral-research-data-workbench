@@ -1,0 +1,9 @@
+smoking_status,label,n_adults,n_with_cotinine,n_missing_cotinine,pct_missing_cotinine_within_group,n_below_lod,median_cotinine_ng_ml,q25_cotinine_ng_ml,q75_cotinine_ng_ml,included_in_classifiable_paired_sample
+below_100_lifetime,Fewer than 100 lifetime cigarettes,5799,4961,838,14.45,2079,0.02,0.011,0.073,True
+former,At least 100 lifetime; now not at all,2205,1915,290,13.15,672,0.028,0.011,0.307,True
+current_every_day,At least 100 lifetime; now every day,1306,1118,188,14.4,0,250.5,167.25,335.0,True
+current_some_days,At least 100 lifetime; now some days,378,330,48,12.7,7,92.35,22.725,217.5,True
+refused,Smoking response refused,2,2,0,0.0,0,317.0,268.5,365.5,False
+dont_know,Smoking response: do not know,3,2,1,33.33,1,0.014499999999999999,0.01275,0.01625,False
+missing,Smoking classification unavailable,0,0,0,,0,,,,False
+inconsistent,Questionnaire skip inconsistency,0,0,0,,0,,,,False

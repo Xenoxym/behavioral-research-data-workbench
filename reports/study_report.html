@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synthetic study operations report — 2026-10-16</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#edf3f4;color:#183346;font:13px/1.5 system-ui,Arial,sans-serif}
+main{max-width:1000px;margin:28px auto;background:white;padding:32px 38px;border-top:7px solid #087f83}
+.eyebrow{font-size:11px;letter-spacing:1.7px;color:#087f83;font-weight:800}h1{font-size:27px;line-height:1.2;margin:8px 0}
+.sub{color:#586e7a;margin:8px 0 18px}.banner{background:#fff4d9;padding:9px 12px;border-left:3px solid #b17c13}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.metric{padding:12px;background:#f0f7f7;border:1px solid #d9e8e8;border-radius:7px}
+.metric strong{display:block;font-size:26px;color:#086e72}.metric span{font-size:11px;color:#4b6572}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}h2{font-size:15px;margin:16px 0 7px}p{margin:6px 0}
+table{border-collapse:collapse;width:100%;font-size:11px}th,td{padding:5px 7px;border-bottom:1px solid #e4ebef;text-align:left;vertical-align:top}
+th{background:#f2f6f8;font-weight:650}.note{font-size:11px;color:#5d707b}.small{font-size:11px}
+footer{margin-top:18px;padding-top:10px;border-top:1px solid #d8e2e7;font-size:10px;color:#627682}
+@media print{@page{size:A4 landscape;margin:10mm}body{background:white;font-size:11px}main{margin:0;padding:14px 18px;max-width:none}h1{font-size:23px}.metrics{margin:12px 0}.metric{padding:9px}h2{margin:11px 0 5px}th,td{padding:3px 6px}footer{margin-top:10px}}
+@media(max-width:700px){main{margin:0;padding:22px}.grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}}
+</style></head><body><main>
+<div class="eyebrow">BEHAVIORAL RESEARCH DATA WORKBENCH / OPERATIONS BRIEF</div>
+<h1>Study progress &amp; data readiness</h1>
+<p class="sub">Synthetic smoking-cessation demonstration · As of 2026-10-16 · Descriptive operations report</p>
+<div class="banner"><strong>SYNTHETIC DATA.</strong> No actual participants, recruitment, clinical outcomes, or notifications.</div>
+<div class="metrics">
+<div class="metric"><strong>182</strong><span>ENROLLED / 240 SCREENED ROWS</span></div>
+<div class="metric"><strong>84.9%</strong><span>DUE VISIT COMPLETION · 174 / 205</span></div>
+<div class="metric"><strong>21</strong><span>OVERDUE VISITS</span></div>
+<div class="metric"><strong>0</strong><span>QUALITY FINDINGS · 0 ERRORS / 0 REVIEWS</span></div>
+</div>
+<div class="grid"><section><h2>Participant &amp; follow-up flow</h2>
+
+<p>200 eligible screening rows; 182 enrolled; 13 withdrawn by the report date.</p>
+<p>182 baseline records; 1172 / 2409 EMA prompts answered (48.7%).</p>
+<p class="note">Completion denominator uses enrolled visits whose window has opened by the as-of date. A completion counts only when recorded by that date. Visits affected by withdrawal before or during their window are excluded; visits already missed before withdrawal remain due. Pending windows are included once opened. Invalid schedules are excluded and require review.</p>
+<h2>Interpretation &amp; limitations</h2>
+<p class="small">These are row-based operational counts from the current working data. Duplicates and unresolved findings can distort totals. Rules support human review; they do not establish clinical truth.</p>
+<p class="small">The demonstration does not estimate treatment effects, establish clinical validity, or represent experience recruiting real participants. Public NHANES analysis is a separate cross-sectional case and is not included here.</p>
+</section><section><h2>Expected measurement completeness</h2>
+<p class="note">10 / 3594 expected cells missing (0.3%). Baseline assessments, completed visits, and answered EMA records observed by the report date only. Declined, missed, and not-applicable EMA responses are excluded.</p>
+<table><thead><tr><th>Table · measurement</th><th>Missing / expected</th><th>Missing %</th></tr></thead><tbody><tr><td>baseline · cigarettes_per_day</td><td>0 / 182</td><td>0.0%</td></tr><tr><td>baseline · readiness</td><td>0 / 182</td><td>0.0%</td></tr><tr><td>baseline · co_ppm</td><td>0 / 182</td><td>0.0%</td></tr><tr><td>baseline · nicotine_replacement</td><td>0 / 182</td><td>0.0%</td></tr><tr><td>visits · cigarettes_7d</td><td>0 / 174</td><td>0.0%</td></tr><tr><td>visits · abstinent_7d</td><td>0 / 174</td><td>0.0%</td></tr><tr><td>visits · co_ppm</td><td>10 / 174</td><td>5.7%</td></tr><tr><td>ema · urge</td><td>0 / 1172</td><td>0.0%</td></tr><tr><td>ema · stress</td><td>0 / 1172</td><td>0.0%</td></tr></tbody></table>
+</section></div>
+<h2>Open findings · first five of 0</h2>
+<table><thead><tr><th>Rule</th><th>Record</th><th>Review prompt</th></tr></thead><tbody><tr><td colspan="3">No open automated findings.</td></tr></tbody></table>
+<footer>Reproducible local portfolio demonstration · pandas + SQLite + Streamlit · Original imports and reasoned corrections are preserved in the application audit history. This HTML contains no external scripts or assets.</footer>
+</main></body></html>

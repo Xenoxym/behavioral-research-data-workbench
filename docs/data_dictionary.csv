@@ -1,0 +1,45 @@
+table,variable,description,type,range_or_values,missing_encoding,units,required_when
+participants,row_id,Unique source row identifier,string,Unique within table,Empty CSV cell,None,Always
+participants,participant_id,Synthetic screened person identifier,string,SYN-0001 etc,Empty CSV cell,None,Always
+participants,age,Age at screening,integer,0-100; eligible participants 18-100,Empty CSV cell,Years,Always
+participants,screening_date,Screening or referral record date,date,YYYY-MM-DD,Empty CSV cell,Calendar date,Always
+participants,eligible,Meets demo eligibility criteria,boolean,0=no; 1=yes,Empty CSV cell,None,Always
+participants,eligibility_reason,Eligibility decision or eligible decliner reason,category,eligible; underage; low_use; declined,Empty CSV cell,None,Always
+participants,consent_date,Documented synthetic consent date,date,YYYY-MM-DD; on or after screening,Empty CSV cell,Calendar date,Enrolled
+participants,enrollment_date,Enrollment date,date,YYYY-MM-DD; on or after consent,Empty CSV cell,Calendar date,Only enrolled people
+participants,arm,Demonstration study assignment,category,control; app,Empty CSV cell,None,Enrolled
+participants,withdrawal_date,Withdrawal effective date,date,YYYY-MM-DD; on or after enrollment,Empty CSV cell,Calendar date,Withdrawn people
+participants,withdrawal_reason,Recorded reason for withdrawal,string,participant_request in generated examples,Empty CSV cell,None,Withdrawal date present
+baseline,row_id,Unique source row identifier,string,Unique within table,Empty CSV cell,None,Always
+baseline,participant_id,Reference to enrolled synthetic participant,string,Existing participant_id,Empty CSV cell,None,Always
+baseline,assessed_at,Baseline assessment date,date,YYYY-MM-DD; on or after enrollment,Empty CSV cell,Calendar date,Always
+baseline,cigarettes_per_day,Self-reported typical daily cigarette count,integer,0-100,Empty CSV cell,Cigarettes per day,Always
+baseline,readiness,Demonstration readiness rating,integer,0-10,Empty CSV cell,Rating points,Always
+baseline,co_ppm,Exhaled carbon monoxide demonstration measurement,number,0-100,Empty CSV cell,Parts per million,Always
+baseline,nicotine_replacement,Self-reported nicotine replacement use,boolean,0=no; 1=yes,Empty CSV cell,None,Always
+visits,row_id,Unique source row identifier,string,Unique within table,Empty CSV cell,None,Always
+visits,participant_id,Reference to enrolled synthetic participant,string,Existing participant_id,Empty CSV cell,None,Always
+visits,visit_code,Planned follow-up event,category,W04; W12,Empty CSV cell,Week code,Always
+visits,target_date,Planned visit target date,date,YYYY-MM-DD; between window_start and window_end,Empty CSV cell,Calendar date,Always
+visits,window_start,First protocol-window date,date,YYYY-MM-DD,Empty CSV cell,Calendar date,Always
+visits,window_end,Last protocol-window date,date,YYYY-MM-DD,Empty CSV cell,Calendar date,Always
+visits,completed_at,Actual visit completion date,date,YYYY-MM-DD,Empty CSV cell,Calendar date,Completed visits
+visits,status,Recorded visit status,category,completed; scheduled; missed; withdrawn,Empty CSV cell,None,Always
+visits,cigarettes_7d,Self-reported cigarette count during previous seven days,integer,0-700,Empty CSV cell,Cigarettes per seven days,Completed unless explicitly declined or technical missingness
+visits,abstinent_7d,Self-reported seven-day abstinence,boolean,0=no; 1=yes,Empty CSV cell,None,Completed unless explicitly declined or technical missingness
+visits,co_ppm,Exhaled CO measurement; >6 with abstinence prompts contextual review,number,0-100; threshold is demo protocol only,Empty CSV cell,Parts per million,Completed unless explicitly declined or technical missingness
+visits,missing_reason,Context for absent follow-up measurements,category,declined; unable_to_reach; technical; not_applicable,Empty CSV cell,None,Missed/withdrawn or explicitly missing completed measurements
+ema,row_id,Unique source row identifier,string,Unique within table,Empty CSV cell,None,Always
+ema,participant_id,Reference to enrolled synthetic participant,string,Existing participant_id,Empty CSV cell,None,Always
+ema,prompted_at,Time the daily demonstration question was presented,timestamp,ISO 8601 with UTC offset,Empty CSV cell,Time,Always
+ema,responded_at,Time response was completed,timestamp,ISO 8601 with UTC offset; at or after prompt,Empty CSV cell,Time,Answered
+ema,uploaded_at,Upload time kept distinct from response time,timestamp,ISO 8601 with UTC offset; at or after response; late upload allowed,Empty CSV cell,Time,Answered
+ema,urge,Demonstration current urge-to-smoke rating,integer,0-10,Empty CSV cell,Rating points,Answered
+ema,stress,Demonstration current stress rating,integer,0-10,Empty CSV cell,Rating points,Answered
+ema,response_state,Item response or structural missingness state,category,answered; missed; declined; not_applicable,Empty CSV cell,None,Always
+contacts,row_id,Unique source row identifier,string,Unique within table,Empty CSV cell,None,Always
+contacts,participant_id,Reference to screened synthetic participant,string,Existing participant_id,Empty CSV cell,None,Always
+contacts,contacted_at,Date of simulated contact record,date,YYYY-MM-DD; on or after screening,Empty CSV cell,Calendar date,Always
+contacts,channel,Simulated contact channel,category,phone; email,Empty CSV cell,None,Always
+contacts,outcome,Simulated contact outcome,category,reached; no_answer; declined,Empty CSV cell,None,Always
+contacts,note,Synthetic operational note; no contact details,string,Free text; synthetic content only,Empty CSV cell,None,Optional
